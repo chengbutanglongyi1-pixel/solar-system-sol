@@ -1,0 +1,11 @@
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: #05070d;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
