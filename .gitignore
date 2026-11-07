@@ -1,0 +1,6 @@
+node_modules
+dist
+scripts/mock-results.json
+scripts/invariants-result.json
+.DS_Store
+*.log

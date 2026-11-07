@@ -1,0 +1,86 @@
+{
+  "official:europa-warm": {
+    "sha256": "2dbee40971d522d482703e407e06d970dd6e52750422b3e15ac8c5350813ebcf",
+    "bytes": 27242
+  },
+  "pc:earth": {
+    "sha256": "f6757dfbe0123bfaab90dad71fabfdaaf44fecf565d1b6b9145628245ccbd804",
+    "bytes": 20724
+  },
+  "pc:moon": {
+    "sha256": "20de15be6804184e103d49a82c93add9edcda0d3dd524cc969b0a6d58ab5d08c",
+    "bytes": 18400
+  },
+  "pc:mars": {
+    "sha256": "a2407223772f58a9a75f8a73b7cb95a36ae120ded6481ee97ae4d29fff14cb56",
+    "bytes": 7360
+  },
+  "pc:venus": {
+    "sha256": "1928f0142acb76a057631dd541908e4b2acf4266e22f56664f3db00657a0eb2f",
+    "bytes": 3040
+  },
+  "pc:mercury": {
+    "sha256": "10471daab6fd259440b470a023a948ebe15ea0e9762e97720f310a09ee8ec3e7",
+    "bytes": 16852
+  },
+  "pc:jupiter": {
+    "sha256": "7ea8483ad14dbb1718d1f8950eb6e0beb61a6c3495f088cfc9d27cce003d746c",
+    "bytes": 5984
+  },
+  "pc:saturn": {
+    "sha256": "d498b051ae138688db84606ca7262555a201485995d4d96b3f375435856916b9",
+    "bytes": 3714
+  },
+  "pc:sun": {
+    "sha256": "469f89cba9b6d291394d0f397d74bb724e921b2c6b83e7667cca9f467ab42b8e",
+    "bytes": 1994
+  },
+  "pc:uranus": {
+    "sha256": "5da224217aed5adaa84fe0c2fa1fee3ef3fddbd0d3c6d1915d483b3d8547b579",
+    "bytes": 1042
+  },
+  "pc:neptune": {
+    "sha256": "f468ecc7a47eb86bae520cd73d7925c61f5b48d3c80abf0b4a6c1e562ae935a6",
+    "bytes": 1828
+  },
+  "pc:io": {
+    "sha256": "f25fbea6b1467a130bd4b63a2699ca7ac7671c1464c28f1b4555785349350d84",
+    "bytes": 17766
+  },
+  "pc:europa": {
+    "sha256": "86b084887de1f177c121bfdf35023b634b3934119bfc9be393d636615a3882eb",
+    "bytes": 33438
+  },
+  "pc:ganymede": {
+    "sha256": "250a5ff1505d31851522862ee64b4deecf7ba9183a09c90c812b597b9381124b",
+    "bytes": 24462
+  },
+  "pc:callisto": {
+    "sha256": "88ea34ee054a7fbdecd2e55069600d27918eb46e8fc10f390298e653d6b92889",
+    "bytes": 57310
+  },
+  "pc:titan": {
+    "sha256": "d452bf879758323effe9a59d9a555b1b25f91c5b464edf81911053f82d729881",
+    "bytes": 1508
+  },
+  "pc:titania": {
+    "sha256": "f8ff26d3a60b764cf7b51b3f37b2df1da31cb9f8498e472392e920cc7dc7a7ec",
+    "bytes": 13860
+  },
+  "pc:triton": {
+    "sha256": "c35786506e06f7747b0d92b801a059e19b3c8bfc4e93b77ef0972e95de56f7b0",
+    "bytes": 9022
+  },
+  "pc:ceres": {
+    "sha256": "0d854e699c40af8b329b743fe1b5fb5fff716e3fb76d83284af5b928c3d08093",
+    "bytes": 8820
+  },
+  "pc:pluto": {
+    "sha256": "e3448905d0e4b82bc3f100de221f01ea5bbc498af93632414b9db4c1eeacf8fc",
+    "bytes": 7562
+  },
+  "pc:charon": {
+    "sha256": "5d0ebcd43df5e4b8a340b7be3f2c1ee18214778d66c7e2a8218ed173c356c292",
+    "bytes": 8122
+  }
+}
