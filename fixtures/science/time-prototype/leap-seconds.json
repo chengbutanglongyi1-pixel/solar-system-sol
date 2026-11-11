@@ -1,0 +1,151 @@
+{
+  "source": "https://hpiers.obspm.fr/iers/bul/bulc/Leap_Second.dat",
+  "sourceSha256": "6cb6f5d4b819f2e568e25db4b0b26d89dedf031fdffb18bc94d40f4e94e268d7",
+  "bulletin": "https://datacenter.iers.org/data/html/bulletinc-072.html",
+  "version": "IERS Bulletin C 72 (2026-07-06)",
+  "retrievedUtcDate": "2026-11-12",
+  "validFrom": "1972-01-01",
+  "expiresExclusive": "2027-06-28",
+  "entries": [
+    {
+      "effectiveDate": "1972-01-01",
+      "mjd": 41317,
+      "taiMinusUtcSeconds": 10
+    },
+    {
+      "effectiveDate": "1972-07-01",
+      "mjd": 41499,
+      "taiMinusUtcSeconds": 11
+    },
+    {
+      "effectiveDate": "1973-01-01",
+      "mjd": 41683,
+      "taiMinusUtcSeconds": 12
+    },
+    {
+      "effectiveDate": "1974-01-01",
+      "mjd": 42048,
+      "taiMinusUtcSeconds": 13
+    },
+    {
+      "effectiveDate": "1975-01-01",
+      "mjd": 42413,
+      "taiMinusUtcSeconds": 14
+    },
+    {
+      "effectiveDate": "1976-01-01",
+      "mjd": 42778,
+      "taiMinusUtcSeconds": 15
+    },
+    {
+      "effectiveDate": "1977-01-01",
+      "mjd": 43144,
+      "taiMinusUtcSeconds": 16
+    },
+    {
+      "effectiveDate": "1978-01-01",
+      "mjd": 43509,
+      "taiMinusUtcSeconds": 17
+    },
+    {
+      "effectiveDate": "1979-01-01",
+      "mjd": 43874,
+      "taiMinusUtcSeconds": 18
+    },
+    {
+      "effectiveDate": "1980-01-01",
+      "mjd": 44239,
+      "taiMinusUtcSeconds": 19
+    },
+    {
+      "effectiveDate": "1981-07-01",
+      "mjd": 44786,
+      "taiMinusUtcSeconds": 20
+    },
+    {
+      "effectiveDate": "1982-07-01",
+      "mjd": 45151,
+      "taiMinusUtcSeconds": 21
+    },
+    {
+      "effectiveDate": "1983-07-01",
+      "mjd": 45516,
+      "taiMinusUtcSeconds": 22
+    },
+    {
+      "effectiveDate": "1985-07-01",
+      "mjd": 46247,
+      "taiMinusUtcSeconds": 23
+    },
+    {
+      "effectiveDate": "1988-01-01",
+      "mjd": 47161,
+      "taiMinusUtcSeconds": 24
+    },
+    {
+      "effectiveDate": "1990-01-01",
+      "mjd": 47892,
+      "taiMinusUtcSeconds": 25
+    },
+    {
+      "effectiveDate": "1991-01-01",
+      "mjd": 48257,
+      "taiMinusUtcSeconds": 26
+    },
+    {
+      "effectiveDate": "1992-07-01",
+      "mjd": 48804,
+      "taiMinusUtcSeconds": 27
+    },
+    {
+      "effectiveDate": "1993-07-01",
+      "mjd": 49169,
+      "taiMinusUtcSeconds": 28
+    },
+    {
+      "effectiveDate": "1994-07-01",
+      "mjd": 49534,
+      "taiMinusUtcSeconds": 29
+    },
+    {
+      "effectiveDate": "1996-01-01",
+      "mjd": 50083,
+      "taiMinusUtcSeconds": 30
+    },
+    {
+      "effectiveDate": "1997-07-01",
+      "mjd": 50630,
+      "taiMinusUtcSeconds": 31
+    },
+    {
+      "effectiveDate": "1999-01-01",
+      "mjd": 51179,
+      "taiMinusUtcSeconds": 32
+    },
+    {
+      "effectiveDate": "2006-01-01",
+      "mjd": 53736,
+      "taiMinusUtcSeconds": 33
+    },
+    {
+      "effectiveDate": "2009-01-01",
+      "mjd": 54832,
+      "taiMinusUtcSeconds": 34
+    },
+    {
+      "effectiveDate": "2012-07-01",
+      "mjd": 56109,
+      "taiMinusUtcSeconds": 35
+    },
+    {
+      "effectiveDate": "2015-07-01",
+      "mjd": 57204,
+      "taiMinusUtcSeconds": 36
+    },
+    {
+      "effectiveDate": "2017-01-01",
+      "mjd": 57754,
+      "taiMinusUtcSeconds": 37
+    }
+  ]
+}
