@@ -10,6 +10,9 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourcePath = path.join(root, "src/SolarSystemApp.tsx");
 const source = fs.readFileSync(sourcePath, "utf8");
+const orbitSource = fs.readFileSync(path.join(root, "src/science/legacy-orbits.ts"), "utf8");
+assert.ok(orbitSource.includes("export const ELEMENTS: Record<string, number[]>"));
+assert.ok(source.includes('import { JD_START, ELEMENTS, rotOrbit, orbElems, helioVec } from "./science/legacy-orbits";'));
 const expected = JSON.parse(fs.readFileSync(path.join(root, "scripts/expected-maps.json"), "utf8"));
 
 function sha256(buf) {
@@ -50,7 +53,7 @@ for (const token of [
   'pending: "有意待同步：手机暖官图尚待美术验收；电脑保留旧预画，不是漏更新"',
   'mobile: { source: "official-map", resource: "official:europa-warm"',
   'pc: { source: "pc-prebaked", resource: "pc:europa"',
-  "const ELEMENTS: Record<string, number[]>",
+  "for (const id of HELIO_IDS) pos[id] = vscl(helioVec(id, years), AU_KM);",
   "const ROT_IAU: Record<string, [number, number]>",
   "function lockPoleOf(",
   "function moonRelAt(",

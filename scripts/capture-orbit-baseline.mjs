@@ -26,10 +26,9 @@ assert.equal(blob, expectedBlob);
 const bytes = git('cat-file', 'blob', blob);
 const actualBlob = crypto.createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
 assert.equal(actualBlob, expectedBlob, 'Git blob byte verification failed');
-assert.equal(git('rev-parse', `HEAD:${sourcePath}`).toString().trim(), blob, 'Current production source diverged from baseline');
 const source = bytes.toString('utf8');
-assert.equal(fs.readFileSync(path.join(root, sourcePath), 'utf8').replace(/\r\n/g, '\n'), source,
-  'Working source differs beyond Windows checkout line endings');
+// This verifies the frozen original, independently of later production relocation.
+// test-legacy-orbits.mjs separately verifies the current production module and wiring.
 
 // A narrow whitelist of top-level declarations, not a general dependency resolver.
 // Parsing does not execute module imports or initialize any UI/resources.
