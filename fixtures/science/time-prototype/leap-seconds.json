@@ -3,7 +3,7 @@
   "sourceSha256": "6cb6f5d4b819f2e568e25db4b0b26d89dedf031fdffb18bc94d40f4e94e268d7",
   "bulletin": "https://datacenter.iers.org/data/html/bulletinc-072.html",
   "version": "IERS Bulletin C 72 (2026-07-06)",
-  "retrievedUtcDate": "2026-11-12",
+  "retrievedUtcDate": "2026-11-11",
   "validFrom": "1972-01-01",
   "expiresExclusive": "2027-06-28",
   "entries": [
