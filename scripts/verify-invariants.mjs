@@ -56,7 +56,7 @@ for (const token of [
   "function moonRelAt(",
   "const VIS: Record<string, Vis>",
 ]) {
-  assert.ok(source.includes(token), "missing protected text: " + token);
+  assert.ok(source.replace(/\r\n/g, "\n").includes(token), "missing protected text: " + token);
 }
 
 assert.equal(source.includes("if (!isMobileUA) selectSurface(it.id"), false);
