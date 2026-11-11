@@ -1,0 +1,1996 @@
+{
+  "baselineSha256": "f2136d8b901ef4edfa49f9123109ef9fd58a316aaceb3fd9272f619a22e2fb9c",
+  "hashes": {
+    "emb": {
+      "ut": "656a20a1d3b78f75eba04c8378ae23d8e200faa779ecbfad3551275ae0bc226c",
+      "old": "d2006c708a5c3aea43301e5c012efa87d1e4c13744188a773b343bbc7b553424"
+    },
+    "earth": {
+      "ut": "43c92aa39cb224c2dd81e53fc99c6809f7a46052a0450fa5939bfa01d85b3eb3",
+      "old": "673d6422e94418fae2bb11eb0314f07ccadf5f3383fb501987318ad6c20938da"
+    },
+    "moon-sun": {
+      "ut": "fff8166befa3fdb0a5b475e5b772ec3b68a889e246ec43a0a4715af8949c948b",
+      "old": "20f8a5b9f14e92abec833dda49ba9915bb81ead780464d9b6225481dc4d2c014"
+    },
+    "moon-earth": {
+      "ut": "0819dd0e3c73ea3a77f52a8b712783c3e5aeff9864476ce33bcaaa4635038b81",
+      "old": "09b27f5750ffe203ce835d69d9b3ef32423e32fa97f4c37e080dfde8bfe2b1bf"
+    },
+    "mars-system": {
+      "ut": "847a11d6a3b4632c06fbb298bc819996b00f68076c60b5305ee1f947b63de493",
+      "old": "1884bddf37388b69c301b872ff74594e4688a0a1bd76fc8f1e57e5d9f428d680"
+    },
+    "mars-body": {
+      "ut": "3113865f6abd6c79a0db76eabac873d03d682985cef177d39dbcd088577cdefa",
+      "old": "409e2abc98e82eb1387066bd435adceb2a99010db44eecc0d133628afa1d7501"
+    },
+    "jupiter-system": {
+      "ut": "d9e05afb3785ae63ab9c9d25a15cf973c4c5bb86e6ff351433da5d965cb45198",
+      "old": "6c0f9d93472f77b2b161d1d27083519f1183ca5b478f6d2153f3d51534d8c1b7"
+    },
+    "jupiter-body": {
+      "ut": "6891cd703198c0d6dcc13075e3f352c84ed86b6290a7805e1092492f921502ba",
+      "old": "89f3325b7ec29bcc61d04efc513c40f2fb7865db53119bbba9980fe3ef66e6e1"
+    }
+  },
+  "evidence": {
+    "src/science/legacy-orbits.ts": {
+      "sha256": "4891be774a351a6b4c72da261b4f66525263a59727bfa9eedbd1e649a13f69a5",
+      "locations": [
+        {
+          "token": "const ELEMENTS",
+          "line": 9
+        },
+        {
+          "token": "function rotOrbit",
+          "line": 26
+        },
+        {
+          "token": "function helioVec",
+          "line": 55
+        }
+      ]
+    },
+    "src/SolarSystemApp.tsx": {
+      "sha256": "cebe4c40030ac750371921314376bd469f4bab89c55e7b3064ea051e7734c8e8",
+      "locations": [
+        {
+          "token": "const START_MS",
+          "line": 224
+        },
+        {
+          "token": "function utcNowYears",
+          "line": 226
+        },
+        {
+          "token": "const AU_KM",
+          "line": 3010
+        },
+        {
+          "token": "pos.moon = vadd",
+          "line": 2652
+        }
+      ]
+    }
+  },
+  "times": [
+    {
+      "jdUTC": 2451545,
+      "utcCalendar": "A.D. 2000-Jan-01 12:00:00.0000",
+      "tdbMinusUTCSeconds": 64.183903,
+      "jdTDB": 2451545.0007428695,
+      "solClockUTC": "2000-01-01T11:59:59.997Z",
+      "futureLeapSecondsAssumed": false
+    },
+    {
+      "jdUTC": 2461346.1666667,
+      "utcCalendar": "A.D. 2026-Nov-01 16:00:00.0029",
+      "tdbMinusUTCSeconds": 69.182542,
+      "jdTDB": 2461346.1674674237,
+      "solClockUTC": "2026-11-01T16:00:00.000Z",
+      "futureLeapSecondsAssumed": false
+    },
+    {
+      "jdUTC": 2469806.5,
+      "utcCalendar": "A.D. 2049-Dec-31 00:00:00.0000",
+      "tdbMinusUTCSeconds": 69.183893,
+      "jdTDB": 2469806.5008007395,
+      "solClockUTC": "2049-12-30T23:59:59.997Z",
+      "futureLeapSecondsAssumed": true
+    },
+    {
+      "jdUTC": 2461346.4166667,
+      "utcCalendar": "A.D. 2026-Nov-01 22:00:00.0029",
+      "tdbMinusUTCSeconds": 69.182545,
+      "jdTDB": 2461346.4174674237,
+      "solClockUTC": "2026-11-01T22:00:00.000Z",
+      "futureLeapSecondsAssumed": false
+    },
+    {
+      "jdUTC": 2461347.1666667,
+      "utcCalendar": "A.D. 2026-Nov-02 16:00:00.0029",
+      "tdbMinusUTCSeconds": 69.182555,
+      "jdTDB": 2461347.167467424,
+      "solClockUTC": "2026-11-02T16:00:00.000Z",
+      "futureLeapSecondsAssumed": false
+    },
+    {
+      "jdUTC": 2461353.1666667,
+      "utcCalendar": "A.D. 2026-Nov-08 16:00:00.0029",
+      "tdbMinusUTCSeconds": 69.182642,
+      "jdTDB": 2461353.167467425,
+      "solClockUTC": "2026-11-08T16:00:00.000Z",
+      "futureLeapSecondsAssumed": false
+    },
+    {
+      "jdUTC": 2461373.1666667,
+      "utcCalendar": "A.D. 2026-Nov-28 16:00:00.0029",
+      "tdbMinusUTCSeconds": 69.183032,
+      "jdTDB": 2461373.16746743,
+      "solClockUTC": "2026-11-28T16:00:00.000Z",
+      "futureLeapSecondsAssumed": false
+    },
+    {
+      "jdUTC": 2470172.5,
+      "utcCalendar": "A.D. 2051-Jan-01 00:00:00.0000",
+      "tdbMinusUTCSeconds": 69.183916,
+      "jdTDB": 2470172.50080074,
+      "solClockUTC": "2050-12-31T23:59:59.997Z",
+      "futureLeapSecondsAssumed": true
+    }
+  ],
+  "rows": [
+    {
+      "jd": 2451545,
+      "key": "emb",
+      "group": "primary-seven",
+      "oldErrorKm": 2006.1883301242594,
+      "utErrorKm": 401.7017784475833,
+      "referenceShiftKm": 1943.8744239943017,
+      "errorChangeKm": -1604.486551676676,
+      "oldErrorVectorKm": [
+        -1864.725598078221,
+        -728.1667385101318,
+        131.76972613655707
+      ],
+      "utErrorVectorKm": [
+        47.08215983957052,
+        -376.5435410141945,
+        131.76703211837196
+      ],
+      "referenceShiftVectorKm": [
+        -1911.8077579177916,
+        -351.62319749593735,
+        0.0026940181851102807
+      ]
+    },
+    {
+      "jd": 2451545,
+      "key": "earth",
+      "group": "primary-seven",
+      "oldErrorKm": 6792.127023342622,
+      "utErrorKm": 5135.439184618791,
+      "referenceShiftKm": 1944.2650592763468,
+      "errorChangeKm": -1656.6878387238312,
+      "oldErrorVectorKm": [
+        -5407.937880679965,
+        -4069.3312968313694,
+        572.4859618859806
+      ],
+      "utErrorVectorKm": [
+        -3495.628205090761,
+        -3718.278131008148,
+        572.4742886441269
+      ],
+      "referenceShiftVectorKm": [
+        -1912.3096755892038,
+        -351.0531658232212,
+        0.01167324185371399
+      ]
+    },
+    {
+      "jd": 2451545,
+      "key": "moon-sun",
+      "group": "primary-seven",
+      "oldErrorKm": 6745.72007137387,
+      "utErrorKm": 5041.274877465561,
+      "referenceShiftKm": 1912.8578614421172,
+      "errorChangeKm": -1704.4451939083092,
+      "oldErrorVectorKm": [
+        -5544.141630217433,
+        -3774.391084641218,
+        721.9451541545059
+      ],
+      "utErrorVectorKm": [
+        -3673.140064366162,
+        -3376.423988431692,
+        722.6724763380553
+      ],
+      "referenceShiftVectorKm": [
+        -1871.0015658512712,
+        -397.96709620952606,
+        -0.7273221835494041
+      ]
+    },
+    {
+      "jd": 2451545,
+      "key": "moon-earth",
+      "group": "primary-seven",
+      "oldErrorKm": 357.602069738343,
+      "utErrorKm": 413.44190711615636,
+      "referenceShiftKm": 62.5125820316405,
+      "errorChangeKm": 55.83983737781335,
+      "oldErrorVectorKm": [
+        -136.2037495347322,
+        294.9402121461462,
+        149.45919226669503
+      ],
+      "utErrorVectorKm": [
+        -177.51185928325867,
+        341.8541425615549,
+        150.1981876959544
+      ],
+      "referenceShiftVectorKm": [
+        41.308109748526476,
+        -46.913930415408686,
+        -0.7389954292593757
+      ]
+    },
+    {
+      "jd": 2451545,
+      "key": "mars-system",
+      "group": "primary-seven",
+      "oldErrorKm": 8193.144398877495,
+      "utErrorKm": 7631.611900808547,
+      "referenceShiftKm": 1689.765363034121,
+      "errorChangeKm": -561.5324980689484,
+      "oldErrorVectorKm": [
+        -7206.738035559654,
+        3777.943730517756,
+        957.9578261682764
+      ],
+      "utErrorVectorKm": [
+        -7281.356582134962,
+        2090.1596067196224,
+        924.4346092613414
+      ],
+      "referenceShiftVectorKm": [
+        74.61854657530785,
+        1687.7841237981338,
+        33.52321690693498
+      ]
+    },
+    {
+      "jd": 2451545,
+      "key": "mars-body",
+      "group": "primary-seven",
+      "oldErrorKm": 8193.144315112682,
+      "utErrorKm": 7631.611852703195,
+      "referenceShiftKm": 1689.7653633171465,
+      "errorChangeKm": -561.5324624094874,
+      "oldErrorVectorKm": [
+        -7206.738045156002,
+        3777.943531928584,
+        957.9578207433224
+      ],
+      "utErrorVectorKm": [
+        -7281.356589645147,
+        2090.1594077756163,
+        924.4346027914435
+      ],
+      "referenceShiftVectorKm": [
+        74.61854448914528,
+        1687.7841241529677,
+        33.523217951878905
+      ]
+    },
+    {
+      "jd": 2451545,
+      "key": "jupiter-system",
+      "group": "primary-seven",
+      "oldErrorKm": 1149744.8568245051,
+      "utErrorKm": 1148891.3978626118,
+      "referenceShiftKm": 877.8001413147978,
+      "errorChangeKm": -853.4589618933387,
+      "oldErrorVectorKm": [
+        -427284.63099741936,
+        1067351.5015809536,
+        10092.174229798838
+      ],
+      "utErrorVectorKm": [
+        -426776.94634091854,
+        1066635.4577068686,
+        10083.77494224906
+      ],
+      "referenceShiftVectorKm": [
+        -507.68465650081635,
+        716.0438740849495,
+        8.399287549778819
+      ]
+    },
+    {
+      "jd": 2451545,
+      "key": "jupiter-body",
+      "group": "primary-seven",
+      "oldErrorKm": 1149805.1900239228,
+      "utErrorKm": 1148951.7219127428,
+      "referenceShiftKm": 877.8053842175967,
+      "errorChangeKm": -853.4681111800019,
+      "oldErrorVectorKm": [
+        -427325.6901329756,
+        1067400.0454324484,
+        10093.194198697805
+      ],
+      "utErrorVectorKm": [
+        -426818.0040663481,
+        1066683.9961331487,
+        10084.794717399403
+      ],
+      "referenceShiftVectorKm": [
+        -507.68606662750244,
+        716.049299299717,
+        8.399481298401952
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "key": "emb",
+      "group": "primary-seven",
+      "oldErrorKm": 6603.819932090717,
+      "utErrorKm": 8521.464970227737,
+      "referenceShiftKm": 2076.048828269883,
+      "errorChangeKm": 1917.6450381370196,
+      "oldErrorVectorKm": [
+        1671.7314378023148,
+        -6343.93705317378,
+        755.1253940312235
+      ],
+      "utErrorVectorKm": [
+        2998.6065587997437,
+        -7940.615211755037,
+        755.2178514746993
+      ],
+      "referenceShiftVectorKm": [
+        -1326.875120997429,
+        1596.6781585812569,
+        -0.09245744347572327
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "key": "earth",
+      "group": "primary-seven",
+      "oldErrorKm": 3026.9269799547924,
+      "utErrorKm": 4409.370253710992,
+      "referenceShiftKm": 2075.965109285073,
+      "errorChangeKm": 1382.4432737561997,
+      "oldErrorVectorKm": [
+        -1012.1710295081139,
+        -2709.523754298687,
+        892.3439773393848
+      ],
+      "utErrorVectorKm": [
+        313.9753164947033,
+        -4306.698448419571,
+        892.3642806185453
+      ],
+      "referenceShiftVectorKm": [
+        -1326.1463460028172,
+        1597.174694120884,
+        -0.020303279160543752
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "key": "moon-sun",
+      "group": "primary-seven",
+      "oldErrorKm": 2793.3073060702477,
+      "utErrorKm": 4277.935101730068,
+      "referenceShiftKm": 2084.1010613005596,
+      "errorChangeKm": 1484.62779565982,
+      "oldErrorVectorKm": [
+        -575.3715736865997,
+        -2485.4318064153194,
+        1137.6036190158302
+      ],
+      "utErrorVectorKm": [
+        810.7533674240112,
+        -4041.741343766451,
+        1143.5622510007197
+      ],
+      "referenceShiftVectorKm": [
+        -1386.124941110611,
+        1556.3095373511314,
+        -5.958631984889507
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "key": "moon-earth",
+      "group": "primary-seven",
+      "oldErrorKm": 548.7834341350581,
+      "utErrorKm": 616.5153035121505,
+      "referenceShiftKm": 72.81934252861592,
+      "errorChangeKm": 67.73186937709238,
+      "oldErrorVectorKm": [
+        436.7994558600767,
+        224.0919478770811,
+        245.25964168216524
+      ],
+      "utErrorVectorKm": [
+        496.77805087849265,
+        264.95710465084994,
+        251.19797038408433
+      ],
+      "referenceShiftVectorKm": [
+        -59.978595018415945,
+        -40.86515677376883,
+        -5.93832870191909
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "key": "mars-system",
+      "group": "primary-seven",
+      "oldErrorKm": 21665.177230560574,
+      "utErrorKm": 23027.258036328643,
+      "referenceShiftKm": 1592.9079154385115,
+      "errorChangeKm": 1362.0808057680697,
+      "oldErrorVectorKm": [
+        19436.32246861607,
+        -9558.358106970787,
+        -497.0549531755969
+      ],
+      "utErrorVectorKm": [
+        21019.74263486266,
+        -9388.379509359598,
+        -532.3179726777598
+      ],
+      "referenceShiftVectorKm": [
+        -1583.420166246593,
+        -169.9785976111889,
+        35.26301950216293
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "key": "mars-body",
+      "group": "primary-seven",
+      "oldErrorKm": 21665.177292371478,
+      "utErrorKm": 23027.258099392777,
+      "referenceShiftKm": 1592.9079151513909,
+      "errorChangeKm": 1362.0808070212988,
+      "oldErrorVectorKm": [
+        19436.322554931045,
+        -9558.358069449663,
+        -497.0549936918542
+      ],
+      "utErrorVectorKm": [
+        21019.742720663548,
+        -9388.379469662905,
+        -532.3180128214881
+      ],
+      "referenceShiftVectorKm": [
+        -1583.420165732503,
+        -169.97859978675842,
+        35.2630191296339
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "key": "jupiter-system",
+      "group": "primary-seven",
+      "oldErrorKm": 467624.4892725075,
+      "utErrorKm": 467040.51989763527,
+      "referenceShiftKm": 884.154036595494,
+      "errorChangeKm": -583.9693748722202,
+      "oldErrorVectorKm": [
+        -1489.7174426317215,
+        -467619.9242130518,
+        1431.8478600233793
+      ],
+      "utErrorVectorKm": [
+        -824.5967376232147,
+        -467037.64979076385,
+        1414.5474164932966
+      ],
+      "referenceShiftVectorKm": [
+        -665.1207050085068,
+        -582.274422287941,
+        17.300443530082703
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "key": "jupiter-body",
+      "group": "primary-seven",
+      "oldErrorKm": 467635.2117154314,
+      "utErrorKm": 467051.04388296534,
+      "referenceShiftKm": 884.0905171372617,
+      "errorChangeKm": -584.1678324660752,
+      "oldErrorVectorKm": [
+        -1681.3554552793503,
+        -467630.0065193176,
+        1428.734654262662
+      ],
+      "utErrorVectorKm": [
+        -1016.254946231842,
+        -467047.80556082726,
+        1411.4314958900213
+      ],
+      "referenceShiftVectorKm": [
+        -665.1005090475082,
+        -582.2009584903717,
+        17.30315837264061
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "key": "emb",
+      "group": "primary-seven",
+      "oldErrorKm": 4341.5144105383915,
+      "utErrorKm": 2758.2972470325913,
+      "referenceShiftKm": 2095.17857138944,
+      "errorChangeKm": -1583.2171635058003,
+      "oldErrorVectorKm": [
+        -3333.2838664874434,
+        -2774.701398342848,
+        -197.47959986105343
+      ],
+      "utErrorVectorKm": [
+        -1264.4608819149435,
+        -2443.4240205287933,
+        -197.53844435289466
+      ],
+      "referenceShiftVectorKm": [
+        -2068.8229845725,
+        -331.2773778140545,
+        0.058844491841227864
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "key": "earth",
+      "group": "primary-seven",
+      "oldErrorKm": 2712.966318193703,
+      "utErrorKm": 3879.1045172700474,
+      "referenceShiftKm": 2095.2988399054566,
+      "errorChangeKm": 1166.1381990763443,
+      "oldErrorVectorKm": [
+        1187.832246273756,
+        -2435.254428654909,
+        137.02797554656718
+      ],
+      "utErrorVectorKm": [
+        3256.6361849419773,
+        -2103.0986195504665,
+        136.92629870250676
+      ],
+      "referenceShiftVectorKm": [
+        -2068.8039386682212,
+        -332.1558091044426,
+        0.10167684406042099
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "key": "moon-sun",
+      "group": "primary-seven",
+      "oldErrorKm": 2486.3137252960346,
+      "utErrorKm": 3795.8186741456516,
+      "referenceShiftKm": 2086.618558088954,
+      "errorChangeKm": 1309.504948849617,
+      "oldErrorVectorKm": [
+        1202.93275148049,
+        -2138.243734806776,
+        403.2647598918011
+      ],
+      "utErrorVectorKm": [
+        3273.3041786812246,
+        -1878.38331001997,
+        406.68821160602056
+      ],
+      "referenceShiftVectorKm": [
+        -2070.3714272007346,
+        -259.8604247868061,
+        -3.423451714219482
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "key": "moon-earth",
+      "group": "primary-seven",
+      "oldErrorKm": 399.1558628388635,
+      "utErrorKm": 351.49151057800094,
+      "referenceShiftKm": 72.39824682840593,
+      "errorChangeKm": -47.664352260862586,
+      "oldErrorVectorKm": [
+        15.100505201495253,
+        297.0106938309218,
+        266.2367843318643
+      ],
+      "utErrorVectorKm": [
+        16.66799373429967,
+        224.71530952451212,
+        269.76191291318537
+      ],
+      "referenceShiftVectorKm": [
+        -1.5674885328044184,
+        72.29538430640969,
+        -3.5251285813210416
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "key": "mars-system",
+      "group": "primary-seven",
+      "oldErrorKm": 69309.61945871662,
+      "utErrorKm": 67748.09876381374,
+      "referenceShiftKm": 1562.3772512160153,
+      "errorChangeKm": -1561.5206949028798,
+      "oldErrorVectorKm": [
+        27256.131957173347,
+        -63713.739273279905,
+        -1219.0357098029926
+      ],
+      "utErrorVectorKm": [
+        26686.529947787523,
+        -62259.57188348472,
+        -1174.612422247883
+      ],
+      "referenceShiftVectorKm": [
+        569.6020093858242,
+        -1454.1673897951841,
+        -44.42328755510971
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "key": "mars-body",
+      "group": "primary-seven",
+      "oldErrorKm": 69309.61956066063,
+      "utErrorKm": 67748.09886383972,
+      "referenceShiftKm": 1562.3772532608818,
+      "errorChangeKm": -1561.5206968209095,
+      "oldErrorVectorKm": [
+        27256.132128596306,
+        -63713.7393091619,
+        -1219.0357977389358
+      ],
+      "utErrorVectorKm": [
+        26686.530119895935,
+        -62259.571916893125,
+        -1174.612510447856
+      ],
+      "referenceShiftVectorKm": [
+        569.6020087003708,
+        -1454.167392268777,
+        -44.42328729107976
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "key": "jupiter-system",
+      "group": "primary-seven",
+      "oldErrorKm": 1129366.3920047863,
+      "utErrorKm": 1128562.40162183,
+      "referenceShiftKm": 897.2629174366992,
+      "errorChangeKm": -803.9903829563409,
+      "oldErrorVectorKm": [
+        -1128259.2482581139,
+        39534.832087635994,
+        30602.50254058931
+      ],
+      "utErrorVectorKm": [
+        -1127441.978044629,
+        39904.639043688774,
+        30582.67941236589
+      ],
+      "referenceShiftVectorKm": [
+        -817.2702134847641,
+        -369.80695605278015,
+        19.82312822341919
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "key": "jupiter-body",
+      "group": "primary-seven",
+      "oldErrorKm": 1129379.9806905806,
+      "utErrorKm": 1128576.0901153642,
+      "referenceShiftKm": 897.208373594607,
+      "errorChangeKm": -803.8905752163846,
+      "oldErrorVectorKm": [
+        -1128270.2216542363,
+        39607.711500525475,
+        30605.177709789015
+      ],
+      "utErrorVectorKm": [
+        -1127453.0247000456,
+        39977.548026800156,
+        30585.3548052907
+      ],
+      "referenceShiftVectorKm": [
+        -817.196954190731,
+        -369.8365262746811,
+        19.822904498316348
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "key": "emb",
+      "group": "primary-seven",
+      "oldErrorKm": 6579.120564500658,
+      "utErrorKm": 8494.50468702438,
+      "referenceShiftKm": 2076.1828626012352,
+      "errorChangeKm": 1915.384122523723,
+      "oldErrorVectorKm": [
+        1669.5177819430828,
+        -6319.003342837095,
+        753.4816064277284
+      ],
+      "utErrorVectorKm": [
+        3003.384843751788,
+        -7910.019977539778,
+        753.5736945533745
+      ],
+      "referenceShiftVectorKm": [
+        -1333.8670618087053,
+        1591.0166347026825,
+        -0.09208812564611435
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "key": "earth",
+      "group": "primary-seven",
+      "oldErrorKm": 3222.392107713259,
+      "utErrorKm": 4522.825463196635,
+      "referenceShiftKm": 2076.1483868608525,
+      "errorChangeKm": 1300.4333554833756,
+      "oldErrorVectorKm": [
+        -1236.8748801499605,
+        -2846.1622568666935,
+        867.9353860133879
+      ],
+      "utErrorVectorKm": [
+        96.29622934758663,
+        -4437.717130795121,
+        867.9538431280844
+      ],
+      "referenceShiftVectorKm": [
+        -1333.1711094975471,
+        1591.5548739284277,
+        -0.018457114696502686
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "key": "moon-sun",
+      "group": "primary-seven",
+      "oldErrorKm": 2947.541475473687,
+      "utErrorKm": 4339.020788767601,
+      "referenceShiftKm": 2080.237805494684,
+      "errorChangeKm": 1391.4793132939135,
+      "oldErrorVectorKm": [
+        -822.3240759372711,
+        -2612.776247292757,
+        1088.6616303306973
+      ],
+      "utErrorVectorKm": [
+        568.1242954581976,
+        -4160.0337267667055,
+        1094.7399611008323
+      ],
+      "referenceShiftVectorKm": [
+        -1390.4483713954687,
+        1547.2574794739485,
+        -6.078330770134926
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "key": "moon-earth",
+      "group": "primary-seven",
+      "oldErrorKm": 524.4439661690078,
+      "utErrorKm": 592.5890145143693,
+      "referenceShiftKm": 72.66130988816973,
+      "errorChangeKm": 68.14504834536149,
+      "oldErrorVectorKm": [
+        414.55080418501166,
+        233.3860095779528,
+        220.7262443252257
+      ],
+      "utErrorVectorKm": [
+        471.82806608179817,
+        277.68340403487673,
+        226.78611797071062
+      ],
+      "referenceShiftVectorKm": [
+        -57.27726189678651,
+        -44.29739445692394,
+        -6.059873645484913
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "key": "mars-system",
+      "group": "primary-seven",
+      "oldErrorKm": 21600.58688194495,
+      "utErrorKm": 22961.728455423112,
+      "referenceShiftKm": 1592.6266542255778,
+      "errorChangeKm": 1361.1415734781622,
+      "oldErrorVectorKm": [
+        19390.354030236602,
+        -9505.53492718935,
+        -494.29745550919324
+      ],
+      "utErrorVectorKm": [
+        20973.122292801738,
+        -9332.136598080397,
+        -529.472819452174
+      ],
+      "referenceShiftVectorKm": [
+        -1582.768262565136,
+        -173.39832910895348,
+        35.175363942980766
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "key": "mars-body",
+      "group": "primary-seven",
+      "oldErrorKm": 21600.587001657594,
+      "utErrorKm": 22961.7285709511,
+      "referenceShiftKm": 1592.6266565339463,
+      "errorChangeKm": 1361.141569293508,
+      "oldErrorVectorKm": [
+        19390.354069672525,
+        -9505.535117179155,
+        -494.2974863247946
+      ],
+      "utErrorVectorKm": [
+        20973.12233442068,
+        -9332.136786997318,
+        -529.4728512661532
+      ],
+      "referenceShiftVectorKm": [
+        -1582.768264748156,
+        -173.39833018183708,
+        35.175364941358566
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "key": "jupiter-system",
+      "group": "primary-seven",
+      "oldErrorKm": 467716.652090989,
+      "utErrorKm": 467132.35494392185,
+      "referenceShiftKm": 884.1406943049625,
+      "errorChangeKm": -584.2971470671473,
+      "oldErrorVectorKm": [
+        -1561.1237465143204,
+        -467711.8451446295,
+        1435.0774395298213
+      ],
+      "utErrorVectorKm": [
+        -896.2195156812668,
+        -467129.34367620945,
+        1417.7808955144137
+      ],
+      "referenceShiftVectorKm": [
+        -664.9042308330536,
+        -582.5014684200287,
+        17.296544015407562
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "key": "jupiter-body",
+      "group": "primary-seven",
+      "oldErrorKm": 467755.8345087112,
+      "utErrorKm": 467171.367141025,
+      "referenceShiftKm": 884.0608113570669,
+      "errorChangeKm": -584.4673676861566,
+      "oldErrorVectorKm": [
+        -1758.5300278663635,
+        -467750.3401694298,
+        1430.9299300145358
+      ],
+      "utErrorVectorKm": [
+        -1093.636137008667,
+        -467167.94826698303,
+        1413.629524184391
+      ],
+      "referenceShiftVectorKm": [
+        -664.8938908576965,
+        -582.3919024467468,
+        17.300405830144882
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "key": "emb",
+      "group": "primary-seven",
+      "oldErrorKm": 6504.541079593685,
+      "utErrorKm": 8413.029918275979,
+      "referenceShiftKm": 2076.583318786007,
+      "errorChangeKm": 1908.488838682294,
+      "oldErrorVectorKm": [
+        1662.3895183950663,
+        -6243.818673476577,
+        748.4945677806827
+      ],
+      "utErrorVectorKm": [
+        3017.088564902544,
+        -7817.663889810443,
+        748.585535055885
+      ],
+      "referenceShiftVectorKm": [
+        -1354.6990465074778,
+        1573.8452163338661,
+        -0.09096727520227432
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "key": "earth",
+      "group": "primary-seven",
+      "oldErrorKm": 3887.7074017878635,
+      "utErrorKm": 4991.255304344203,
+      "referenceShiftKm": 2076.694600685132,
+      "errorChangeKm": 1103.5479025563395,
+      "oldErrorVectorKm": [
+        -1845.1361548006535,
+        -3328.917992949486,
+        792.4937907521817
+      ],
+      "utErrorVectorKm": [
+        -491.02156279981136,
+        -4903.4128757715225,
+        792.5083644529077
+      ],
+      "referenceShiftVectorKm": [
+        -1354.114592000842,
+        1574.4948828220367,
+        -0.014573700726032257
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "key": "moon-sun",
+      "group": "primary-seven",
+      "oldErrorKm": 3537.129522468768,
+      "utErrorKm": 4689.854515356387,
+      "referenceShiftKm": 2068.760770772743,
+      "errorChangeKm": 1152.7249928876195,
+      "oldErrorVectorKm": [
+        -1486.5615400224924,
+        -3077.2439896166325,
+        912.1345705620424
+      ],
+      "utErrorVectorKm": [
+        -84.34600931406021,
+        -4598.27095168829,
+        918.4363781891243
+      ],
+      "referenceShiftVectorKm": [
+        -1402.2155307084322,
+        1521.0269620716572,
+        -6.301807627081871
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "key": "moon-earth",
+      "group": "primary-seven",
+      "oldErrorKm": 454.1249547879283,
+      "utErrorKm": 523.7885683024341,
+      "referenceShiftKm": 72.19451612161023,
+      "errorChangeKm": 69.66361351450581,
+      "oldErrorVectorKm": [
+        358.5746148325852,
+        251.67400335342973,
+        119.64077981549144
+      ],
+      "utErrorVectorKm": [
+        406.67555348406313,
+        305.14192409682437,
+        125.92801372701933
+      ],
+      "referenceShiftVectorKm": [
+        -48.10093865147792,
+        -53.46792074339464,
+        -6.287233911527892
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "key": "mars-system",
+      "group": "primary-seven",
+      "oldErrorKm": 21407.681199174676,
+      "utErrorKm": 22766.009047440682,
+      "referenceShiftKm": 1591.7855762784588,
+      "errorChangeKm": 1358.3278482660062,
+      "oldErrorVectorKm": [
+        19252.64893897623,
+        -9348.158811479807,
+        -486.0555455777794
+      ],
+      "utErrorVectorKm": [
+        20833.42025978118,
+        -9164.516427665949,
+        -520.967249000445
+      ],
+      "referenceShiftVectorKm": [
+        -1580.7713208049536,
+        -183.64238381385803,
+        34.911703422665596
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "key": "mars-body",
+      "group": "primary-seven",
+      "oldErrorKm": 21407.68116270229,
+      "utErrorKm": 22766.009015833115,
+      "referenceShiftKm": 1591.785574222346,
+      "errorChangeKm": 1358.3278531308242,
+      "oldErrorVectorKm": [
+        19252.64898996055,
+        -9348.158622264862,
+        -486.0555588249117
+      ],
+      "utErrorVectorKm": [
+        20833.420308604836,
+        -9164.516237467527,
+        -520.9672611597925
+      ],
+      "referenceShiftVectorKm": [
+        -1580.7713186442852,
+        -183.64238479733467,
+        34.91170233488083
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "key": "jupiter-system",
+      "group": "primary-seven",
+      "oldErrorKm": 467993.2495103344,
+      "utErrorKm": 467407.9711332875,
+      "referenceShiftKm": 884.1006868483903,
+      "errorChangeKm": -585.278377046925,
+      "oldErrorVectorKm": [
+        -1774.7210944890976,
+        -467987.6543711424,
+        1444.7520462144166
+      ],
+      "utErrorVectorKm": [
+        -1110.4667204618454,
+        -467404.4722507,
+        1427.4672127533704
+      ],
+      "referenceShiftVectorKm": [
+        -664.2543740272522,
+        -583.1821204423904,
+        17.28483346104622
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "key": "jupiter-body",
+      "group": "primary-seven",
+      "oldErrorKm": 468140.23955873796,
+      "utErrorKm": 467554.83121130394,
+      "referenceShiftKm": 884.1620403042356,
+      "errorChangeKm": -585.408347434015,
+      "oldErrorVectorKm": [
+        -1910.9958757162094,
+        -468134.13123095036,
+        1437.7640692759305
+      ],
+      "utErrorVectorKm": [
+        -1246.6050398349762,
+        -467551.0115529299,
+        1420.4790521431714
+      ],
+      "referenceShiftVectorKm": [
+        -664.3908358812332,
+        -583.1196780204773,
+        17.285017132759094
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "key": "emb",
+      "group": "primary-seven",
+      "oldErrorKm": 5886.282446521582,
+      "utErrorKm": 7733.423858804328,
+      "referenceShiftKm": 2079.690157336757,
+      "errorChangeKm": 1847.1414122827464,
+      "oldErrorVectorKm": [
+        1578.6110692322254,
+        -5626.610749930143,
+        705.3790478148176
+      ],
+      "utErrorVectorKm": [
+        3091.770706638694,
+        -7053.305901542306,
+        705.4603722133352
+      ],
+      "referenceShiftVectorKm": [
+        -1513.1596374064684,
+        1426.6951516121626,
+        -0.08132439851760864
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "key": "earth",
+      "group": "primary-seven",
+      "oldErrorKm": 8895.746837386234,
+      "utErrorKm": 10076.428013143906,
+      "referenceShiftKm": 2080.516440304271,
+      "errorChangeKm": 1180.6811757576725,
+      "oldErrorVectorKm": [
+        -2162.420537158847,
+        -8623.518566831946,
+        305.2486574017121
+      ],
+      "utErrorVectorKm": [
+        -648.7587738633156,
+        -10050.885625943542,
+        305.3058984168483
+      ],
+      "referenceShiftVectorKm": [
+        -1513.6617632955313,
+        1427.3670591115952,
+        -0.05724101513624191
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "key": "moon-sun",
+      "group": "primary-seven",
+      "oldErrorKm": 8673.788170797983,
+      "utErrorKm": 9849.341088966466,
+      "referenceShiftKm": 2012.5485068437545,
+      "errorChangeKm": 1175.5529181684833,
+      "oldErrorVectorKm": [
+        -1865.8515066355467,
+        -8460.657203152776,
+        412.89112099915656
+      ],
+      "utErrorVectorKm": [
+        -393.5149854272604,
+        -9832.725897461176,
+        414.930438078045
+      ],
+      "referenceShiftVectorKm": [
+        -1472.3365212082863,
+        1372.0686943084002,
+        -2.0393170788884163
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "key": "moon-earth",
+      "group": "primary-seven",
+      "oldErrorKm": 355.0548036419066,
+      "utErrorKm": 353.21466329137604,
+      "referenceShiftKm": 69.06238769698365,
+      "errorChangeKm": -1.8401403505305325,
+      "oldErrorVectorKm": [
+        296.56903047295054,
+        162.8613636942464,
+        107.64246359674871
+      ],
+      "utErrorVectorKm": [
+        255.24378847837215,
+        218.15972843463533,
+        109.62453966413887
+      ],
+      "referenceShiftVectorKm": [
+        41.32524199457839,
+        -55.298364740388934,
+        -1.9820760673901532
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "key": "mars-system",
+      "group": "primary-seven",
+      "oldErrorKm": 19911.52396528687,
+      "utErrorKm": 21247.59173782961,
+      "referenceShiftKm": 1585.205613239912,
+      "errorChangeKm": 1336.0677725427413,
+      "oldErrorVectorKm": [
+        18163.554670616984,
+        -8147.158728092909,
+        -421.7499341564253
+      ],
+      "utErrorVectorKm": [
+        19726.15302848816,
+        -7882.414370417595,
+        -454.51627824176103
+      ],
+      "referenceShiftVectorKm": [
+        -1562.5983578711748,
+        -264.74435767531395,
+        32.76634408533573
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "key": "mars-body",
+      "group": "primary-seven",
+      "oldErrorKm": 19911.524133453135,
+      "utErrorKm": 21247.59190829045,
+      "referenceShiftKm": 1585.2056138226421,
+      "errorChangeKm": 1336.0677748373164,
+      "oldErrorVectorKm": [
+        18163.55485457927,
+        -8147.15872451663,
+        -421.75001992750913
+      ],
+      "utErrorVectorKm": [
+        19726.153212599456,
+        -7882.414364218712,
+        -454.51636390853673
+      ],
+      "referenceShiftVectorKm": [
+        -1562.5983580201864,
+        -264.7443602979183,
+        32.7663439810276
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "key": "jupiter-system",
+      "group": "primary-seven",
+      "oldErrorKm": 470210.9654167221,
+      "utErrorKm": 469617.9484393457,
+      "referenceShiftKm": 883.7816936801343,
+      "errorChangeKm": -593.016977376421,
+      "oldErrorVectorKm": [
+        -3450.319211602211,
+        -470195.8448623419,
+        1521.436706693843
+      ],
+      "utErrorVectorKm": [
+        -2791.2870485782623,
+        -469607.2438286543,
+        1504.2462056539953
+      ],
+      "referenceShiftVectorKm": [
+        -659.0321630239487,
+        -588.6010336875916,
+        17.19050103984773
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "key": "jupiter-body",
+      "group": "primary-seven",
+      "oldErrorKm": 470260.0488225345,
+      "utErrorKm": 469667.0518076643,
+      "referenceShiftKm": 883.7737602703055,
+      "errorChangeKm": -592.9970148702268,
+      "oldErrorVectorKm": [
+        -3440.443171143532,
+        -470245.0073058605,
+        1519.8596217352897
+      ],
+      "utErrorVectorKm": [
+        -2781.416608452797,
+        -469656.4119247198,
+        1502.668743044138
+      ],
+      "referenceShiftVectorKm": [
+        -659.0265626907349,
+        -588.5953811407089,
+        17.190878691151738
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "key": "emb",
+      "group": "primary-seven",
+      "oldErrorKm": 3755.7073131277716,
+      "utErrorKm": 5303.593924888035,
+      "referenceShiftKm": 2088.433265299106,
+      "errorChangeKm": 1547.8866117602633,
+      "oldErrorVectorKm": [
+        967.1396721675992,
+        -3592.4067342579365,
+        514.3851981338503
+      ],
+      "utErrorVectorKm": [
+        2884.1771774813533,
+        -4420.972184330225,
+        514.4273266297223
+      ],
+      "referenceShiftVectorKm": [
+        -1917.037505313754,
+        828.5654500722885,
+        -0.04212849587202072
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "key": "earth",
+      "group": "primary-seven",
+      "oldErrorKm": 1565.0723423564152,
+      "utErrorKm": 1066.3928809143074,
+      "referenceShiftKm": 2087.894430879604,
+      "errorChangeKm": -498.6794614421078,
+      "oldErrorVectorKm": [
+        -1413.0480695068836,
+        154.39689975976944,
+        654.9108240183832
+      ],
+      "utErrorVectorKm": [
+        503.20912616699934,
+        -674.6154726445675,
+        654.8803828757646
+      ],
+      "referenceShiftVectorKm": [
+        -1916.257195673883,
+        829.0123724043369,
+        0.03044114261865616
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "key": "moon-sun",
+      "group": "primary-seven",
+      "oldErrorKm": 1430.1786497455726,
+      "utErrorKm": 1716.1568934544634,
+      "referenceShiftKm": 2133.062109409247,
+      "errorChangeKm": 285.9782437088909,
+      "oldErrorVectorKm": [
+        -770.8124023750424,
+        385.3564510643482,
+        1141.3849552872052
+      ],
+      "utErrorVectorKm": [
+        1209.6647187918425,
+        -406.87396162748337,
+        1147.3270372527113
+      ],
+      "referenceShiftVectorKm": [
+        -1980.477121166885,
+        792.2304126918316,
+        -5.942081965506077
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "key": "moon-earth",
+      "group": "primary-seven",
+      "oldErrorKm": 838.1324757307457,
+      "utErrorKm": 901.8141318980031,
+      "referenceShiftKm": 74.24811394790345,
+      "errorChangeKm": 63.681656167257415,
+      "oldErrorVectorKm": [
+        642.2356671356247,
+        230.95955130911898,
+        486.47413126753054
+      ],
+      "utErrorVectorKm": [
+        706.4555926147441,
+        267.7415110724978,
+        492.44665437275034
+      ],
+      "referenceShiftVectorKm": [
+        -64.21992547911941,
+        -36.781959763378836,
+        -5.972523105219807
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "key": "mars-system",
+      "group": "primary-seven",
+      "oldErrorKm": 15535.61186632535,
+      "utErrorKm": 16801.609223606836,
+      "referenceShiftKm": 1565.2920750014873,
+      "errorChangeKm": 1265.997357281487,
+      "oldErrorVectorKm": [
+        14758.36441886425,
+        -4847.098402231932,
+        -227.05246131960303
+      ],
+      "utErrorVectorKm": [
+        16233.599591225386,
+        -4324.427853822708,
+        -252.27079030219465
+      ],
+      "referenceShiftVectorKm": [
+        -1475.2351723611355,
+        -522.6705484092236,
+        25.21832898259163
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "key": "mars-body",
+      "group": "primary-seven",
+      "oldErrorKm": 15535.611913055807,
+      "utErrorKm": 16801.60926244896,
+      "referenceShiftKm": 1565.2920768701465,
+      "errorChangeKm": 1265.9973493931539,
+      "oldErrorVectorKm": [
+        14758.3644079566,
+        -4847.098585039377,
+        -227.05246519390494
+      ],
+      "utErrorVectorKm": [
+        16233.599582493305,
+        -4324.4280372262,
+        -252.27079524938017
+      ],
+      "referenceShiftVectorKm": [
+        -1475.235174536705,
+        -522.6705478131771,
+        25.218330055475235
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "key": "jupiter-system",
+      "group": "primary-seven",
+      "oldErrorKm": 477635.1142249289,
+      "utErrorKm": 477017.6510736279,
+      "referenceShiftKm": 882.730331867093,
+      "errorChangeKm": -617.4631513010245,
+      "oldErrorVectorKm": [
+        -8638.37414252758,
+        -477553.7112182379,
+        1770.2357251048088
+      ],
+      "utErrorVectorKm": [
+        -7997.045561671257,
+        -476947.3895508051,
+        1753.3678332231939
+      ],
+      "referenceShiftVectorKm": [
+        -641.3285808563232,
+        -606.321667432785,
+        16.867891881614923
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "key": "jupiter-body",
+      "group": "primary-seven",
+      "oldErrorKm": 477455.6979907518,
+      "utErrorKm": 476838.31531838956,
+      "referenceShiftKm": 882.6141705238078,
+      "errorChangeKm": -617.3826723622624,
+      "oldErrorVectorKm": [
+        -8597.497999668121,
+        -477374.9772769213,
+        1776.9754755236208
+      ],
+      "utErrorVectorKm": [
+        -7956.302357316017,
+        -476768.68420791626,
+        1760.1042955238372
+      ],
+      "referenceShiftVectorKm": [
+        -641.1956423521042,
+        -606.2930690050125,
+        16.871179999783635
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "key": "emb",
+      "group": "2051-out-of-range",
+      "oldErrorKm": 2605.1324073369747,
+      "utErrorKm": 539.8505126122587,
+      "referenceShiftKm": 2095.2495449414296,
+      "errorChangeKm": -2065.281894724716,
+      "oldErrorVectorKm": [
+        -2591.3959544971585,
+        -259.6200180351734,
+        -63.081796173835755
+      ],
+      "utErrorVectorKm": [
+        -526.9977944158018,
+        98.61299014091492,
+        -63.14569521405792
+      ],
+      "referenceShiftVectorKm": [
+        -2064.3981600813568,
+        -358.23300817608833,
+        0.06389904022216797
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "key": "earth",
+      "group": "2051-out-of-range",
+      "oldErrorKm": 7012.806553272155,
+      "utErrorKm": 5343.83419190106,
+      "referenceShiftKm": 2094.634350747345,
+      "errorChangeKm": -1668.9723613710948,
+      "oldErrorVectorKm": [
+        -6505.274882297963,
+        2575.446916759014,
+        -477.4176770047161
+      ],
+      "utErrorVectorKm": [
+        -4441.38828669861,
+        2933.029329061508,
+        -477.4650900036977
+      ],
+      "referenceShiftVectorKm": [
+        -2063.8865955993533,
+        -357.58241230249405,
+        0.04741299898159923
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "key": "moon-sun",
+      "group": "2051-out-of-range",
+      "oldErrorKm": 7023.844848825834,
+      "utErrorKm": 5351.627670546194,
+      "referenceShiftKm": 2145.743553277079,
+      "errorChangeKm": -1672.2171782796395,
+      "oldErrorVectorKm": [
+        -6514.619376398623,
+        2602.304277807474,
+        -349.4900381037223
+      ],
+      "utErrorVectorKm": [
+        -4408.6307341605425,
+        3013.431099295616,
+        -350.89426294650184
+      ],
+      "referenceShiftVectorKm": [
+        -2105.9886422380805,
+        -411.126821488142,
+        1.404224842779513
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "key": "moon-earth",
+      "group": "2051-out-of-range",
+      "oldErrorKm": 131.05005993933605,
+      "utErrorKm": 153.48510082968193,
+      "referenceShiftKm": 68.12801942030735,
+      "errorChangeKm": 22.435040890345874,
+      "oldErrorVectorKm": [
+        -9.34449409658555,
+        26.857361060305266,
+        127.92763890988863
+      ],
+      "utErrorVectorKm": [
+        32.757552537019365,
+        80.40177030142513,
+        126.57082705299399
+      ],
+      "referenceShiftVectorKm": [
+        -42.102046633604914,
+        -53.544409241119865,
+        1.3568118568946375
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "key": "mars-system",
+      "group": "2051-out-of-range",
+      "oldErrorKm": 70669.99610472965,
+      "utErrorKm": 72396.05179621348,
+      "referenceShiftKm": 1735.4137628943379,
+      "errorChangeKm": 1726.0556914838235,
+      "oldErrorVectorKm": [
+        52319.79705673456,
+        -47400.37853720784,
+        -3176.6806440087385
+      ],
+      "utErrorVectorKm": [
+        53476.839464724064,
+        -48692.60316950083,
+        -3232.081855657918
+      ],
+      "referenceShiftVectorKm": [
+        -1157.042407989502,
+        1292.224632292986,
+        55.40121164917946
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "key": "mars-body",
+      "group": "2051-out-of-range",
+      "oldErrorKm": 70669.99611733323,
+      "utErrorKm": 72396.05181117245,
+      "referenceShiftKm": 1735.4137649797337,
+      "errorChangeKm": 1726.0556938392256,
+      "oldErrorVectorKm": [
+        52319.79698944092,
+        -47400.37863200903,
+        -3176.680618155224
+      ],
+      "utErrorVectorKm": [
+        53476.83939862251,
+        -48692.60326600075,
+        -3232.081830609066
+      ],
+      "referenceShiftVectorKm": [
+        -1157.0424091815948,
+        1292.2246339917183,
+        55.40121245384216
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "key": "jupiter-system",
+      "group": "2051-out-of-range",
+      "oldErrorKm": 652326.7301615004,
+      "utErrorKm": 651759.5516057757,
+      "referenceShiftKm": 877.1518800899426,
+      "errorChangeKm": -567.1785557246767,
+      "oldErrorVectorKm": [
+        -650051.0527579784,
+        -50858.49067568779,
+        19421.78204053268
+      ],
+      "utErrorVectorKm": [
+        -649537.6052180529,
+        -50147.46460479498,
+        19407.326211243868
+      ],
+      "referenceShiftVectorKm": [
+        -513.4475399255753,
+        -711.0260708928108,
+        14.455829288810492
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "key": "jupiter-body",
+      "group": "2051-out-of-range",
+      "oldErrorKm": 652338.4948133184,
+      "utErrorKm": 651771.6299931622,
+      "referenceShiftKm": 877.1050765532218,
+      "errorChangeKm": -566.86482015613,
+      "oldErrorVectorKm": [
+        -650076.4202142954,
+        -50682.624290287495,
+        19427.59099122323
+      ],
+      "utErrorVectorKm": [
+        -649563.107965827,
+        -49971.5582844615,
+        19413.13463461399
+      ],
+      "referenceShiftVectorKm": [
+        -513.312248468399,
+        -711.0660058259964,
+        14.456356609240174
+      ]
+    }
+  ],
+  "centers": [
+    {
+      "jd": 2451545,
+      "embError": [
+        47.08215983957052,
+        -376.5435410141945,
+        131.76703211837196
+      ],
+      "embMinusEarth": [
+        -3542.7103649303317,
+        -3341.7345899939537,
+        440.70725652575493
+      ],
+      "earthError": [
+        -3495.628205090761,
+        -3718.278131008148,
+        572.4742886441269
+      ],
+      "cancellationCosine": 0.5852290755699548,
+      "lunarError": [
+        -177.51185928325867,
+        341.8541425615549,
+        150.1981876959544
+      ],
+      "moonError": [
+        -3673.140064366162,
+        -3376.423988431692,
+        722.6724763380553
+      ],
+      "marsSystemMinusBody": [
+        -0.000007510185241699219,
+        -0.00019894400611519814,
+        -0.000006469897925853729
+      ],
+      "jupiterSystemMinusBody": [
+        -41.05772542953491,
+        48.53842628002167,
+        1.0197751503437757
+      ]
+    },
+    {
+      "jd": 2461346.1666667,
+      "embError": [
+        2998.6065587997437,
+        -7940.615211755037,
+        755.2178514746993
+      ],
+      "embMinusEarth": [
+        -2684.6312423050404,
+        3633.9167633354664,
+        137.14642914384604
+      ],
+      "earthError": [
+        313.9753164947033,
+        -4306.698448419571,
+        892.3642806185453
+      ],
+      "cancellationCosine": -0.9554530784937995,
+      "lunarError": [
+        496.77805087849265,
+        264.95710465084994,
+        251.19797038408433
+      ],
+      "moonError": [
+        810.7533674240112,
+        -4041.741343766451,
+        1143.5622510007197
+      ],
+      "marsSystemMinusBody": [
+        0.0000858008861541748,
+        0.000039696693420410156,
+        -0.000040143728256225586
+      ],
+      "jupiterSystemMinusBody": [
+        -191.65820860862732,
+        -10.155770063400269,
+        -3.115920603275299
+      ]
+    },
+    {
+      "jd": 2469806.5,
+      "embError": [
+        -1264.4608819149435,
+        -2443.4240205287933,
+        -197.53844435289466
+      ],
+      "embMinusEarth": [
+        4521.097066856921,
+        340.3254009783268,
+        334.4647430554014
+      ],
+      "earthError": [
+        3256.6361849419773,
+        -2103.0986195504665,
+        136.92629870250676
+      ],
+      "cancellationCosine": -0.5274711755608352,
+      "lunarError": [
+        16.66799373429967,
+        224.71530952451212,
+        269.76191291318537
+      ],
+      "moonError": [
+        3273.3041786812246,
+        -1878.38331001997,
+        406.68821160602056
+      ],
+      "marsSystemMinusBody": [
+        0.00017210841178894043,
+        -0.000033408403396606445,
+        -0.00008819997310638428
+      ],
+      "jupiterSystemMinusBody": [
+        -11.046655416488647,
+        72.90898311138153,
+        2.6753929248079658
+      ]
+    },
+    {
+      "jd": 2461346.4166667,
+      "embError": [
+        3003.384843751788,
+        -7910.019977539778,
+        753.5736945533745
+      ],
+      "embMinusEarth": [
+        -2907.0886144042015,
+        3472.3028467446566,
+        114.38014857470989
+      ],
+      "earthError": [
+        96.29622934758663,
+        -4437.717130795121,
+        867.9538431280844
+      ],
+      "cancellationCosine": -0.9384249283753917,
+      "lunarError": [
+        471.82806608179817,
+        277.68340403487673,
+        226.78611797071062
+      ],
+      "moonError": [
+        568.1242954581976,
+        -4160.0337267667055,
+        1094.7399611008323
+      ],
+      "marsSystemMinusBody": [
+        0.000041618943214416504,
+        -0.00018891692161560059,
+        -0.000031813979148864746
+      ],
+      "jupiterSystemMinusBody": [
+        -197.4166213274002,
+        -38.60459077358246,
+        -4.151371330022812
+      ]
+    },
+    {
+      "jd": 2461347.1666667,
+      "embError": [
+        3017.088564902544,
+        -7817.663889810443,
+        748.585535055885
+      ],
+      "embMinusEarth": [
+        -3508.1101277023554,
+        2914.2510140389204,
+        43.922829397022724
+      ],
+      "earthError": [
+        -491.02156279981136,
+        -4903.4128757715225,
+        792.5083644529077
+      ],
+      "cancellationCosine": -0.8687339802315158,
+      "lunarError": [
+        406.67555348406313,
+        305.14192409682437,
+        125.92801372701933
+      ],
+      "moonError": [
+        -84.34600931406021,
+        -4598.27095168829,
+        918.4363781891243
+      ],
+      "marsSystemMinusBody": [
+        0.000048823654651641846,
+        0.00019019842147827148,
+        -0.000012159347534179688
+      ],
+      "jupiterSystemMinusBody": [
+        -136.1383193731308,
+        -146.5393022298813,
+        -6.988160610198975
+      ]
+    },
+    {
+      "jd": 2461353.1666667,
+      "embError": [
+        3091.770706638694,
+        -7053.305901542306,
+        705.4603722133352
+      ],
+      "embMinusEarth": [
+        -3740.5294805020094,
+        -2997.5797244012356,
+        -400.15447379648685
+      ],
+      "earthError": [
+        -648.7587738633156,
+        -10050.885625943542,
+        305.3058984168483
+      ],
+      "cancellationCosine": 0.24989346956465103,
+      "lunarError": [
+        255.24378847837215,
+        218.15972843463533,
+        109.62453966413887
+      ],
+      "moonError": [
+        -393.5149854272604,
+        -9832.725897461176,
+        414.930438078045
+      ],
+      "marsSystemMinusBody": [
+        0.00018411129713058472,
+        0.000006198883056640625,
+        -0.00008566677570343018
+      ],
+      "jupiterSystemMinusBody": [
+        9.870440125465393,
+        -49.16809606552124,
+        -1.5774626098573208
+      ]
+    },
+    {
+      "jd": 2461373.1666667,
+      "embError": [
+        2884.1771774813533,
+        -4420.972184330225,
+        514.4273266297223
+      ],
+      "embMinusEarth": [
+        -2380.968051314354,
+        3746.3567116856575,
+        140.45305624604225
+      ],
+      "earthError": [
+        503.20912616699934,
+        -674.6154726445675,
+        654.8803828757646
+      ],
+      "cancellationCosine": -0.9916488961082925,
+      "lunarError": [
+        706.4555926147441,
+        267.7415110724978,
+        492.44665437275034
+      ],
+      "moonError": [
+        1209.6647187918425,
+        -406.87396162748337,
+        1147.3270372527113
+      ],
+      "marsSystemMinusBody": [
+        -0.000008732080459594727,
+        -0.00018340349197387695,
+        -0.000004947185516357422
+      ],
+      "jupiterSystemMinusBody": [
+        40.74320435523987,
+        178.7053428888321,
+        6.736462300643325
+      ]
+    },
+    {
+      "jd": 2470172.5,
+      "embError": [
+        -526.9977944158018,
+        98.61299014091492,
+        -63.14569521405792
+      ],
+      "embMinusEarth": [
+        -3914.390492282808,
+        2834.4163389205933,
+        -414.3193947896398
+      ],
+      "earthError": [
+        -4441.38828669861,
+        2933.029329061508,
+        -477.4650900036977
+      ],
+      "cancellationCosine": 0.9045152190481975,
+      "lunarError": [
+        32.757552537019365,
+        80.40177030142513,
+        126.57082705299399
+      ],
+      "moonError": [
+        -4408.6307341605425,
+        3013.431099295616,
+        -350.89426294650184
+      ],
+      "marsSystemMinusBody": [
+        -0.0000661015510559082,
+        -0.00009649991989135742,
+        0.00002504885196685791
+      ],
+      "jupiterSystemMinusBody": [
+        -25.502747774124146,
+        175.90632033348083,
+        5.8084233701229095
+      ]
+    }
+  ],
+  "frameBasisChecks": "PASS: identity, +inclination maps +Y toward +Z, orthonormal right-handed basis"
+}
