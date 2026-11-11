@@ -1,0 +1,2168 @@
+{
+  "schema": "SOL-legacy-orbit-baseline-v1",
+  "provenance": {
+    "commit": "4f89ab2ad44b5209219f2d78405680ef826d9158",
+    "sourcePath": "src/SolarSystemApp.tsx",
+    "gitBlob": "96953222ef5151e193a3d79f7a612c039244fc47",
+    "sourceSha256": "07eb792aa1833c59bee02c344686d18d7f771bf9e600ae8a56ad64fd3cd49612",
+    "extractedExecutableSha256": "a64be17e2de98c4db16e4176f7716106cfef5d64d0fb4ffe94339f3d406454c1",
+    "declarationsAndProductionLocations": [
+      {
+        "name": "YEAR_S",
+        "line": 220
+      },
+      {
+        "name": "START_MS",
+        "line": 223
+      },
+      {
+        "name": "utcNowYears",
+        "line": 225
+      },
+      {
+        "name": "JD_START",
+        "line": 235
+      },
+      {
+        "name": "ELEMENTS",
+        "line": 236
+      },
+      {
+        "name": "V3",
+        "line": 2042
+      },
+      {
+        "name": "vadd",
+        "line": 2045
+      },
+      {
+        "name": "vscl",
+        "line": 2046
+      },
+      {
+        "name": "D2R",
+        "line": 2057
+      },
+      {
+        "name": "rotOrbit",
+        "line": 2060
+      },
+      {
+        "name": "orbElems",
+        "line": 2073
+      },
+      {
+        "name": "helioVec",
+        "line": 2088
+      },
+      {
+        "name": "moonState",
+        "line": 2116
+      },
+      {
+        "name": "PLANET_IDS",
+        "line": 2204
+      },
+      {
+        "name": "AU_KM",
+        "line": 3058
+      },
+      {
+        "name": "DWARF_IDS",
+        "line": 3160
+      },
+      {
+        "name": "HELIO_IDS",
+        "line": 3161
+      },
+      {
+        "name": "moonVec",
+        "line": 3479
+      },
+      {
+        "name": "const jd = JD_START + years * 365.25;",
+        "line": 11572
+      },
+      {
+        "name": "const pos: Record<string, V3> = { sun: [0, 0, 0] };",
+        "line": 11578
+      }
+    ]
+  },
+  "environment": {
+    "node": "v22.23.4",
+    "v8": "12.4.254.21-node.57",
+    "typescript": "5.9.3",
+    "platform": "win32",
+    "arch": "x64",
+    "osRelease": "10.0.19045",
+    "endianness": "LE"
+  },
+  "interpretation": {
+    "purpose": "Frozen old algorithm outputs, NOT NASA/JPL accuracy validation. Never auto-update.",
+    "time": "Input JD is a numeric legacy argument. years=(inputJD-JD_START)/365.25; production recomputes JD_START+years*365.25. Runtime utcNowYears uses Date.now minus UTC START_MS divided by YEAR_S. No demonstrated UTC->TT/TDB or leap-second conversion.",
+    "coordinates": "Raw production physical coordinates before scene compression, camera transforms or display scaling.",
+    "earth": "Earth coefficients identify the approximate EMB slot; production treats it as Earth without barycenter-to-geocenter correction. Preserved, not fixed.",
+    "validity": "Source comments cite planetary elements 1800-2050 and Ceres fit 2006-2046; some requested dates are outside a cited interval. Comments/accuracy claims are not independently verified.",
+    "encoding": "JSON decimal Numbers round-trip IEEE-754 binary64; float64HexBE stores 8-byte big-endian bit patterns including signed zero.",
+    "repeatability": "Exact comparison expected in recorded runtime; cross-runtime/platform transcendental last-bit equality is not guaranteed."
+  },
+  "samples": [
+    {
+      "inputJD": {
+        "decimal": 2451545,
+        "float64HexBE": "4142b42c80000000"
+      },
+      "years": {
+        "decimal": -26.834131873237617,
+        "float64HexBE": "c03ad589aa9c1b56"
+      },
+      "productionJD": {
+        "decimal": 2451545,
+        "float64HexBE": "4142b42c80000000"
+      },
+      "scope": "Requested fixed legacy sample; model validity not certified",
+      "vectors": {
+        "sun": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "float64HexBE": [
+            "0000000000000000",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Exact production origin"
+        },
+        "mercury": {
+          "xyz": [
+            -19460980.613990635,
+            -66913981.13610061,
+            -3679931.0510644102
+          ],
+          "float64HexBE": [
+            "c1728f3749d2e7d8",
+            "c18fe835e916bbeb",
+            "c14c135d86894752"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "venus": {
+          "xyz": [
+            -107458597.29243945,
+            -4892846.938469074,
+            6135850.0679359995
+          ],
+          "float64HexBE": [
+            "c1999ec0952b753f",
+            "c152aa2bbc0fe097",
+            "4157680a8459103c"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "earth": {
+          "xyz": [
+            -26504441.61531118,
+            144693227.46125248,
+            -38.66346406764603
+          ],
+          "float64HexBE": [
+            "c17946cf99d85089",
+            "41a13fafd6ec2949",
+            "c04354ec63fc4e30"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Earth position: uncorrected approximate Earth-Moon barycenter slot; NOT an independently computed Earth center"
+        },
+        "mars": {
+          "xyz": [
+            208040933.90379685,
+            -2003274.6844932924,
+            -5155331.001447279
+          ],
+          "float64HexBE": [
+            "41a8cce7cbcebe76",
+            "c13e914aaf3af3d1",
+            "c153aa80c017b654"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "jupiter": {
+          "xyz": [
+            598140298.9669315,
+            440672079.9936054,
+            -15216768.478788761
+          ],
+          "float64HexBE": [
+            "41c1d372c57bc469",
+            "41ba441f4ffe5cec",
+            "c16d06100f523ccf"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "saturn": {
+          "xyz": [
+            959638100.2927507,
+            979217915.0597695,
+            -55223571.194788
+          ],
+          "float64HexBE": [
+            "41cc99752a2578db",
+            "41cd2ed6fd87a687",
+            "c18a5528998eed03"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "uranus": {
+          "xyz": [
+            2158018979.878918,
+            -2055122548.9982839,
+            -35609247.964264914
+          ],
+          "float64HexBE": [
+            "41e01418347c2019",
+            "c1de9fab9d3fe3e2",
+            "c180fad4ffb6d086"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "neptune": {
+          "xyz": [
+            2513956734.281608,
+            -3738856178.1147666,
+            19059248.949305028
+          ],
+          "float64HexBE": [
+            "41e2bafdefc902ef",
+            "c1ebdb4d5e43ac2b",
+            "41722d230f305a78"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "ceres": {
+          "xyz": [
+            -357304831.4319639,
+            116152804.12907617,
+            69459181.7886353
+          ],
+          "float64HexBE": [
+            "c1b54c09ff6e9530",
+            "419bb16790842c8b",
+            "41908f73b7279003"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "pluto": {
+          "xyz": [
+            -1478795088.596009,
+            -4182817514.1106076,
+            875291312.9792649
+          ],
+          "float64HexBE": [
+            "c1d60927d4262503",
+            "c1ef2a175d438a19",
+            "41ca15f1587d588d"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "moon": {
+          "xyz": [
+            -26796186.203248426,
+            144418542.65979147,
+            36381.99235519191
+          ],
+          "float64HexBE": [
+            "c1798e09a340816c",
+            "41a1374ddd51d030",
+            "40e1c3bfc15face9"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Moon position: approximate EMB slot plus geocentric lunar vector; inherits mixed-center error"
+        },
+        "earthSlotApproxEmbAU": {
+          "xyz": [
+            -0.177171249104625,
+            0.9672144849669474,
+            -2.5844929400887544e-7
+          ],
+          "float64HexBE": [
+            "bfc6ad8c28591114",
+            "3feef36bcaa4d115",
+            "be915820040c5290"
+          ],
+          "unit": "AU",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "earth coefficient slot: approximate Earth-Moon barycenter, no mass-ratio correction"
+        },
+        "earthSlotApproxEmbKm": {
+          "xyz": [
+            -26504441.61531118,
+            144693227.46125248,
+            -38.66346406764603
+          ],
+          "float64HexBE": [
+            "c17946cf99d85089",
+            "41a13fafd6ec2949",
+            "c04354ec63fc4e30"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Same uncorrected earth slot used by production"
+        },
+        "moonRelativeEarth": {
+          "xyz": [
+            -291744.58793724765,
+            -274684.80146100424,
+            36420.65581925956
+          ],
+          "float64HexBE": [
+            "c111ce825a0c38cb",
+            "c110c3f334b23189",
+            "40e1c894fc78abfd"
+          ],
+          "unit": "km",
+          "center": "Earth center (lunar model)",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "moonVec(moonState): geocentric approximation before legacy composition"
+        }
+      }
+    },
+    {
+      "inputJD": {
+        "decimal": 2461346.1666667,
+        "float64HexBE": "4142c7511555559d"
+      },
+      "years": {
+        "decimal": 0,
+        "float64HexBE": "0000000000000000"
+      },
+      "productionJD": {
+        "decimal": 2461346.1666667,
+        "float64HexBE": "4142c7511555559d"
+      },
+      "scope": "Requested fixed legacy sample; model validity not certified",
+      "vectors": {
+        "sun": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "float64HexBE": [
+            "0000000000000000",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Exact production origin"
+        },
+        "mercury": {
+          "xyz": [
+            44597756.84520936,
+            20874885.756649416,
+            -2384352.1154162767
+          ],
+          "float64HexBE": [
+            "4185440fe6c2fd20",
+            "4173e8685c1b3c6b",
+            "c14230f00ec5f5e7"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "venus": {
+          "xyz": [
+            77777170.19994515,
+            75103463.08149579,
+            -3455820.0379843893
+          ],
+          "float64HexBE": [
+            "41928b2448ccbe6c",
+            "4191e7f39c5373a2",
+            "c14a5da604dcac27"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "earth": {
+          "xyz": [
+            115597656.0523115,
+            93178595.43641001,
+            -5674.78172439355
+          ],
+          "float64HexBE": [
+            "419b8f8560359125",
+            "4196372b8dbee244",
+            "c0b62ac81f1700c8"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Earth position: uncorrected approximate Earth-Moon barycenter slot; NOT an independently computed Earth center"
+        },
+        "mars": {
+          "xyz": [
+            -44427510.53666177,
+            234354228.65014964,
+            6000745.892666486
+          ],
+          "float64HexBE": [
+            "c1852f47b44b1553",
+            "41abefec694ce06a",
+            "4156e41a7921729d"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "jupiter": {
+          "xyz": [
+            -549003068.2741048,
+            575038607.9800551,
+            9893959.807089403
+          ],
+          "float64HexBE": [
+            "c1c05c8f9e2315de",
+            "41c1233247fd7272",
+            "4162df08f9d3ad28"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "saturn": {
+          "xyz": [
+            1378163718.8426392,
+            291926293.4888831,
+            -59919867.16139527
+          ],
+          "float64HexBE": [
+            "41d4894701b5edcd",
+            "41b16671157d2771",
+            "c18c926fd94a899a"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "uranus": {
+          "xyz": [
+            1318911321.7825391,
+            2590259436.727151,
+            -7481806.368582943
+          ],
+          "float64HexBE": [
+            "41d3a73f5672151f",
+            "41e34c871d9744d2",
+            "c15c8a739796dcea"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "neptune": {
+          "xyz": [
+            4462765745.137613,
+            220708184.72986597,
+            -107388283.70638515
+          ],
+          "float64HexBE": [
+            "41f0a0066b1233aa",
+            "41aa4f7ab175b0fe",
+            "c1999a75eed356a1"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "ceres": {
+          "xyz": [
+            -8626705.627806358,
+            396664418.80843854,
+            14251760.596520506
+          ],
+          "float64HexBE": [
+            "c16074423416fd5c",
+            "41b7a49e62cef5d4",
+            "416b2ede1316b22c"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "pluto": {
+          "xyz": [
+            2999485290.2000036,
+            -4389370279.919668,
+            -397894133.29730433
+          ],
+          "float64HexBE": [
+            "41e659106d46666e",
+            "c1f05a079a7eb6f6",
+            "c1b7b761f54c1c23"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "moon": {
+          "xyz": [
+            115377206.15365462,
+            93477933.80800712,
+            5863.645293912905
+          ],
+          "float64HexBE": [
+            "419b8210d89d57a3",
+            "41964970b73b6638",
+            "40b6e7a531fb5c3c"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Moon position: approximate EMB slot plus geocentric lunar vector; inherits mixed-center error"
+        },
+        "earthSlotApproxEmbAU": {
+          "xyz": [
+            0.7727226030116985,
+            0.6228604391252878,
+            -0.000037933572836565445
+          ],
+          "float64HexBE": [
+            "3fe8ba24c09a166a",
+            "3fe3ee7904007d6b",
+            "bf03e35ba355cb3a"
+          ],
+          "unit": "AU",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "earth coefficient slot: approximate Earth-Moon barycenter, no mass-ratio correction"
+        },
+        "earthSlotApproxEmbKm": {
+          "xyz": [
+            115597656.0523115,
+            93178595.43641001,
+            -5674.78172439355
+          ],
+          "float64HexBE": [
+            "419b8f8560359125",
+            "4196372b8dbee244",
+            "c0b62ac81f1700c8"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Same uncorrected earth slot used by production"
+        },
+        "moonRelativeEarth": {
+          "xyz": [
+            -220449.8986568819,
+            299338.3715971123,
+            11538.427018306455
+          ],
+          "float64HexBE": [
+            "c10ae90f307304f1",
+            "411245297c83f412",
+            "40c68936a8892e82"
+          ],
+          "unit": "km",
+          "center": "Earth center (lunar model)",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "moonVec(moonState): geocentric approximation before legacy composition"
+        }
+      }
+    },
+    {
+      "inputJD": {
+        "decimal": 2469806.5,
+        "float64HexBE": "4142d7d740000000"
+      },
+      "years": {
+        "decimal": 23.163130275975252,
+        "float64HexBE": "403729c2e7e04d19"
+      },
+      "productionJD": {
+        "decimal": 2469806.5,
+        "float64HexBE": "4142d7d740000000"
+      },
+      "scope": "Requested fixed legacy sample; model validity not certified",
+      "vectors": {
+        "sun": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "float64HexBE": [
+            "0000000000000000",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Exact production origin"
+        },
+        "mercury": {
+          "xyz": [
+            -22396319.521920104,
+            42067454.042913005,
+            5491983.901880574
+          ],
+          "float64HexBE": [
+            "c1755bd9f859c8e5",
+            "41840f2ff057e2c6",
+            "4154f343f9b8694d"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "venus": {
+          "xyz": [
+            18255358.904014677,
+            -107257039.2869318,
+            -2533639.717650555
+          ],
+          "float64HexBE": [
+            "417168dfee76d818",
+            "c19992733d25d173",
+            "c1435483dbdbf930"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "earth": {
+          "xyz": [
+            -23091861.832273796,
+            145284378.92253286,
+            -16452.311142665894
+          ],
+          "float64HexBE": [
+            "c17605a95d50fe54",
+            "41a151ba35d8563a",
+            "c0d01113e9c2ed9a"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Earth position: uncorrected approximate Earth-Moon barycenter slot; NOT an independently computed Earth center"
+        },
+        "mars": {
+          "xyz": [
+            -231556246.9339097,
+            -73586161.30886291,
+            4123751.767592466
+          ],
+          "float64HexBE": [
+            "c1ab9a892dde296a",
+            "c1918b57c53c468f",
+            "414f7633e240784d"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "jupiter": {
+          "xyz": [
+            -357803423.8422204,
+            698237630.9073384,
+            5087039.436396689
+          ],
+          "float64HexBE": [
+            "c1b553a59fd79bc2",
+            "41c4cf215f7423aa",
+            "415367cfdbedec61"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "saturn": {
+          "xyz": [
+            710149319.2610219,
+            -1314972787.2544086,
+            -5491448.387970043
+          ],
+          "float64HexBE": [
+            "41c52a0263a1692a",
+            "c1d398391cd0483b",
+            "c154f2be18d4804e"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "uranus": {
+          "xyz": [
+            -2665929370.2375445,
+            610703354.8466822,
+            36773224.463894695
+          ],
+          "float64HexBE": [
+            "c1e3dcdb534799f7",
+            "41c2334bfd6c6015",
+            "418188eb43b60e6c"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "neptune": {
+          "xyz": [
+            2603359702.701327,
+            3619059524.863031,
+            -134523184.86732075
+          ],
+          "float64HexBE": [
+            "41e36583bad67145",
+            "41eaf6cee89b9df3",
+            "c1a0095261bc1177"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "ceres": {
+          "xyz": [
+            -90325127.36726098,
+            380204749.68775165,
+            29153329.462681353
+          ],
+          "float64HexBE": [
+            "c19589021d781343",
+            "41b6a976cdb0107e",
+            "417bcd8317672490"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "pluto": {
+          "xyz": [
+            5602842988.490078,
+            -2264579190.1555753,
+            -1378275675.5405588
+          ],
+          "float64HexBE": [
+            "41f4df4996c7d75c",
+            "c1e0df578ec4fa79",
+            "c1d489b456e29884"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "moon": {
+          "xyz": [
+            -22719756.30669287,
+            145312612.61172038,
+            11344.08917279648
+          ],
+          "float64HexBE": [
+            "c175aad0c4e836c8",
+            "41a15296c939336a",
+            "40c6280b6a03a24a"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Moon position: approximate EMB slot plus geocentric lunar vector; inherits mixed-center error"
+        },
+        "earthSlotApproxEmbAU": {
+          "xyz": [
+            -0.15435956223321967,
+            0.9711660884123323,
+            -0.0001099769071958181
+          ],
+          "float64HexBE": [
+            "bfc3c20ddbceeb48",
+            "3fef13cae796e304",
+            "bf1cd46ce0fe9c8c"
+          ],
+          "unit": "AU",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "earth coefficient slot: approximate Earth-Moon barycenter, no mass-ratio correction"
+        },
+        "earthSlotApproxEmbKm": {
+          "xyz": [
+            -23091861.832273796,
+            145284378.92253286,
+            -16452.311142665894
+          ],
+          "float64HexBE": [
+            "c17605a95d50fe54",
+            "41a151ba35d8563a",
+            "c0d01113e9c2ed9a"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Same uncorrected earth slot used by production"
+        },
+        "moonRelativeEarth": {
+          "xyz": [
+            372105.5255809263,
+            28233.689187531912,
+            27796.400315462375
+          ],
+          "float64HexBE": [
+            "4116b6261a31e2e7",
+            "40db926c1ba60598",
+            "40db25199ec4bebf"
+          ],
+          "unit": "km",
+          "center": "Earth center (lunar model)",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "moonVec(moonState): geocentric approximation before legacy composition"
+        }
+      }
+    },
+    {
+      "inputJD": {
+        "decimal": 2461346.4166667,
+        "float64HexBE": "4142c7513555559d"
+      },
+      "years": {
+        "decimal": 0.0006844626967830253,
+        "float64HexBE": "3f466db072f2284d"
+      },
+      "productionJD": {
+        "decimal": 2461346.4166667,
+        "float64HexBE": "4142c7513555559d"
+      },
+      "scope": "Requested fixed legacy sample; model validity not certified",
+      "vectors": {
+        "sun": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "float64HexBE": [
+            "0000000000000000",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Exact production origin"
+        },
+        "mercury": {
+          "xyz": [
+            43935246.77627073,
+            21868848.544219505,
+            -2242357.953836551
+          ],
+          "float64HexBE": [
+            "4184f3307635cd6e",
+            "4174db1308b51f83",
+            "c1411b9afa1750ec"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "venus": {
+          "xyz": [
+            77247502.06630577,
+            75642558.31203288,
+            -3417850.2835937934
+          ],
+          "float64HexBE": [
+            "41926ad03843e5a9",
+            "419208daf93f858c",
+            "c14a137d244ccd2a"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "earth": {
+          "xyz": [
+            115182291.59223865,
+            93676251.04786718,
+            -5705.234929624797
+          ],
+          "float64HexBE": [
+            "419b762b4e5e73cf",
+            "4196558b6c310418",
+            "c0b6493c24590f5d"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Earth position: uncorrected approximate Earth-Moon barycenter slot; NOT an independently computed Earth center"
+        },
+        "mars": {
+          "xyz": [
+            -44921826.71233984,
+            234300678.97677,
+            6011744.744660552
+          ],
+          "float64HexBE": [
+            "c1856b9f15b2df3b",
+            "41abee4a0df41b33",
+            "4156eed82fa884bb"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "jupiter": {
+          "xyz": [
+            -549210768.3141522,
+            574856684.4679825,
+            9899363.930971993
+          ],
+          "float64HexBE": [
+            "c1c05e2548283624",
+            "41c121cef63be6da",
+            "4162e1ac7dca85c7"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "saturn": {
+          "xyz": [
+            1378109196.5689833,
+            292129910.5958985,
+            -59921235.84030189
+          ],
+          "float64HexBE": [
+            "41d48911c3246a39",
+            "41b1698c76988cce",
+            "c18c929a9eb8f033"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "uranus": {
+          "xyz": [
+            1318779165.4180355,
+            2590319319.02864,
+            -7479872.376031409
+          ],
+          "float64HexBE": [
+            "41d3a6be475ac118",
+            "41e34ca45ae0ea9e",
+            "c15c88901810e60b"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "neptune": {
+          "xyz": [
+            4462759176.277486,
+            220826133.6446275,
+            -107390561.33352187
+          ],
+          "float64HexBE": [
+            "41f0a004d0847095",
+            "41aa53142b4a0c9e",
+            "c1999a99855586c2"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "ceres": {
+          "xyz": [
+            -9021365.309001504,
+            396626363.9177427,
+            14323256.779437093
+          ],
+          "float64HexBE": [
+            "c16134f6a9e3571f",
+            "41b7a409bbeaf130",
+            "416b51c718f1260f"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "pluto": {
+          "xyz": [
+            2999585587.64091,
+            -4389330310.5010605,
+            -397927423.4249705
+          ],
+          "float64HexBE": [
+            "41e6594166748256",
+            "c1f059fdd8680458",
+            "c1b7b7e3ff6ccade"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "moon": {
+          "xyz": [
+            114943508.37547666,
+            93962301.22859572,
+            3935.102409666494
+          ],
+          "float64HexBE": [
+            "419b679851807cf4",
+            "41966700f4ea14ff",
+            "40aebe346f0a30c6"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Moon position: approximate EMB slot plus geocentric lunar vector; inherits mixed-center error"
+        },
+        "earthSlotApproxEmbAU": {
+          "xyz": [
+            0.7699460630908476,
+            0.626187061416959,
+            -0.00003813713994008604
+          ],
+          "float64HexBE": [
+            "3fe8a365ed1517b3",
+            "3fe409b972beda95",
+            "bf03feae268392f0"
+          ],
+          "unit": "AU",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "earth coefficient slot: approximate Earth-Moon barycenter, no mass-ratio correction"
+        },
+        "earthSlotApproxEmbKm": {
+          "xyz": [
+            115182291.59223865,
+            93676251.04786718,
+            -5705.234929624797
+          ],
+          "float64HexBE": [
+            "419b762b4e5e73cf",
+            "4196558b6c310418",
+            "c0b6493c24590f5d"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Same uncorrected earth slot used by production"
+        },
+        "moonRelativeEarth": {
+          "xyz": [
+            -238783.2167619856,
+            286050.1807285342,
+            9640.33733929129
+          ],
+          "float64HexBE": [
+            "c10d25f9bbedb539",
+            "41117588b910e69f",
+            "40c2d42b2def13e0"
+          ],
+          "unit": "km",
+          "center": "Earth center (lunar model)",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "moonVec(moonState): geocentric approximation before legacy composition"
+        }
+      }
+    },
+    {
+      "inputJD": {
+        "decimal": 2461347.1666667,
+        "float64HexBE": "4142c7519555559d"
+      },
+      "years": {
+        "decimal": 0.0027378507871321013,
+        "float64HexBE": "3f666db072f2284d"
+      },
+      "productionJD": {
+        "decimal": 2461347.1666667,
+        "float64HexBE": "4142c7519555559d"
+      },
+      "scope": "Requested fixed legacy sample; model validity not certified",
+      "vectors": {
+        "sun": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "float64HexBE": [
+            "0000000000000000",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Exact production origin"
+        },
+        "mercury": {
+          "xyz": [
+            41810593.560093455,
+            24779669.448617145,
+            -1809607.0095178066
+          ],
+          "float64HexBE": [
+            "4183efd50c7b1247",
+            "4177a1b9572d892c",
+            "c13b9cc7026fc24c"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "venus": {
+          "xyz": [
+            75635925.14024593,
+            77237533.41656645,
+            -3302945.1252385364
+          ],
+          "float64HexBE": [
+            "41920873548f9ca1",
+            "41926a3475aa9065",
+            "c14933109007d0fd"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "earth": {
+          "xyz": [
+            113923152.0297339,
+            95158544.33366714,
+            -5795.953672916701
+          ],
+          "float64HexBE": [
+            "419b2951401e7290",
+            "4196b0044155acd7",
+            "c0b6a3f423e88450"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Earth position: uncorrected approximate Earth-Moon barycenter slot; NOT an independently computed Earth center"
+        },
+        "mars": {
+          "xyz": [
+            -46403538.68163887,
+            234133628.17877853,
+            6044576.808699345
+          ],
+          "float64HexBE": [
+            "c186207e9573ff14",
+            "41abe930f85b88dc",
+            "41570ee833c1bae6"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "jupiter": {
+          "xyz": [
+            -549833462.0742214,
+            574310488.7867622,
+            9915568.977622377
+          ],
+          "float64HexBE": [
+            "c1c062e57b098016",
+            "41c11da42c64b4a0",
+            "4162e9961f48aeb9"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "saturn": {
+          "xyz": [
+            1377945447.0803216,
+            292740723.1787949,
+            -59925333.9305467
+          ],
+          "float64HexBE": [
+            "41d48871d9c523fd",
+            "41b172de732dc581",
+            "c18c931aaf71c278"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "uranus": {
+          "xyz": [
+            1318382676.361076,
+            2590498926.7071977,
+            -7474070.285717427
+          ],
+          "float64HexBE": [
+            "41d3a53b15171bdf",
+            "41e34cfc0dd6a15d",
+            "c15c82e5924931bf"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "neptune": {
+          "xyz": [
+            4462739451.104145,
+            221179979.469329,
+            -107397393.76754187
+          ],
+          "float64HexBE": [
+            "41f09fffffb1aa94",
+            "41aa5de096f04be4",
+            "c1999b044711f67f"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "ceres": {
+          "xyz": [
+            -10205289.200143052,
+            396509844.52037966,
+            14537659.95972963
+          ],
+          "float64HexBE": [
+            "c163770d26679267",
+            "41b7a2429485379a",
+            "416bba777eb61aea"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "pluto": {
+          "xyz": [
+            2999886472.592605,
+            -4389210391.468966,
+            -398027292.8289773
+          ],
+          "float64HexBE": [
+            "41e659d45112f69f",
+            "c1f059e0917780e2",
+            "c1b7b96a1cd437db"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "moon": {
+          "xyz": [
+            113634839.24839328,
+            95398693.98998597,
+            -2055.1518409841287
+          ],
+          "float64HexBE": [
+            "419b17b85cfe5acf",
+            "4196beac97f5bee2",
+            "c0a00e4dbe19fa0d"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Moon position: approximate EMB slot plus geocentric lunar vector; inherits mixed-center error"
+        },
+        "earthSlotApproxEmbAU": {
+          "xyz": [
+            0.7615292349861896,
+            0.6360955800266423,
+            -0.00003874355728324348
+          ],
+          "float64HexBE": [
+            "3fe85e728ee6d5ad",
+            "3fe45ae51e2b06cc",
+            "bf0450127ddfe952"
+          ],
+          "unit": "AU",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "earth coefficient slot: approximate Earth-Moon barycenter, no mass-ratio correction"
+        },
+        "earthSlotApproxEmbKm": {
+          "xyz": [
+            113923152.0297339,
+            95158544.33366714,
+            -5795.953672916701
+          ],
+          "float64HexBE": [
+            "419b2951401e7290",
+            "4196b0044155acd7",
+            "c0b6a3f423e88450"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Same uncorrected earth slot used by production"
+        },
+        "moonRelativeEarth": {
+          "xyz": [
+            -288312.78134061734,
+            240149.65631883324,
+            3740.8018319325724
+          ],
+          "float64HexBE": [
+            "c11198e32017c13a",
+            "410d50ad402416a4",
+            "40ad399a89b70e93"
+          ],
+          "unit": "km",
+          "center": "Earth center (lunar model)",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "moonVec(moonState): geocentric approximation before legacy composition"
+        }
+      }
+    },
+    {
+      "inputJD": {
+        "decimal": 2461353.1666667,
+        "float64HexBE": "4142c7549555559d"
+      },
+      "years": {
+        "decimal": 0.019164955509924708,
+        "float64HexBE": "3f939ffa6493e343"
+      },
+      "productionJD": {
+        "decimal": 2461353.1666667,
+        "float64HexBE": "4142c7549555559d"
+      },
+      "scope": "Requested fixed legacy sample; model validity not certified",
+      "vectors": {
+        "sun": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "float64HexBE": [
+            "0000000000000000",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Exact production origin"
+        },
+        "mercury": {
+          "xyz": [
+            18252738.432058085,
+            42335689.47191316,
+            1785790.5026359644
+          ],
+          "float64HexBE": [
+            "4171683c26e9b5bd",
+            "41842fee4bc67a68",
+            "413b3fbe80acc025"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "venus": {
+          "xyz": [
+            61605488.65983979,
+            88715466.28280228,
+            -2335664.18576108
+          ],
+          "float64HexBE": [
+            "418d603385475a15",
+            "419526c3292196ec",
+            "c141d1d817c704e2"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "earth": {
+          "xyz": [
+            103169059.34239253,
+            106411745.54211576,
+            -6485.3179366103695
+          ],
+          "float64HexBE": [
+            "419898f08d5e9c26",
+            "41995edb862b2065",
+            "c0b95551644b2fbd"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Earth position: uncorrected approximate Earth-Moon barycenter slot; NOT an independently computed Earth center"
+        },
+        "mars": {
+          "xyz": [
+            -58184029.7401169,
+            232453977.4764849,
+            6298244.452808271
+          ],
+          "float64HexBE": [
+            "c18bbe8aedebc269",
+            "41abb5eeb2f3f5d4",
+            "415806a11cfacf8b"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "jupiter": {
+          "xyz": [
+            -554793000.7390897,
+            569918043.1422071,
+            10044811.957507225
+          ],
+          "float64HexBE": [
+            "c1c088bc145e9a7e",
+            "41c0fc212d9233d8",
+            "416328b17ea3e631"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "saturn": {
+          "xyz": [
+            1376625588.608221,
+            297625117.91772556,
+            -59957689.35774619
+          ],
+          "float64HexBE": [
+            "41d48368ed26ed18",
+            "41b1bd661deaf010",
+            "c18c970dcadcaa09"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "uranus": {
+          "xyz": [
+            1315209686.8193088,
+            2591933669.3454404,
+            -7427647.493966662
+          ],
+          "float64HexBE": [
+            "41d3992075b46f8e",
+            "41e34fb89cab0dd9",
+            "c15c558fdf9d2659"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "neptune": {
+          "xyz": [
+            4462580645.707289,
+            224010696.1619963,
+            -107452029.0757604
+          ],
+          "float64HexBE": [
+            "41f09fd93a5b510e",
+            "41aab4439052f12e",
+            "c1999e59f44d9422"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "ceres": {
+          "xyz": [
+            -19672512.68672232,
+            395450418.86005795,
+            16248052.618322441
+          ],
+          "float64HexBE": [
+            "c172c2dc0afcd08b",
+            "41b7921832dc2cc2",
+            "416efd9e93c94c25"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "pluto": {
+          "xyz": [
+            3002293154.101713,
+            -4388250457.422461,
+            -398826195.16161865
+          ],
+          "float64HexBE": [
+            "41e65e6b7443413c",
+            "c1f058f63596c266",
+            "c1b7c59ad3295fd7"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "moon": {
+          "xyz": [
+            102861466.88447927,
+            106165261.18724234,
+            -39308.63396652132
+          ],
+          "float64HexBE": [
+            "4198862a6b89b4ef",
+            "41994fd034bfbc75",
+            "c0e331944974287b"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Moon position: approximate EMB slot plus geocentric lunar vector; inherits mixed-center error"
+        },
+        "earthSlotApproxEmbAU": {
+          "xyz": [
+            0.6896425654967062,
+            0.7113185839089338,
+            -0.00004335167276288225
+          ],
+          "float64HexBE": [
+            "3fe6118d49179cce",
+            "3fe6c31f30dda0fe",
+            "bf06ba90224a66ef"
+          ],
+          "unit": "AU",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "earth coefficient slot: approximate Earth-Moon barycenter, no mass-ratio correction"
+        },
+        "earthSlotApproxEmbKm": {
+          "xyz": [
+            103169059.34239253,
+            106411745.54211576,
+            -6485.3179366103695
+          ],
+          "float64HexBE": [
+            "419898f08d5e9c26",
+            "41995edb862b2065",
+            "c0b95551644b2fbd"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Same uncorrected earth slot used by production"
+        },
+        "moonRelativeEarth": {
+          "xyz": [
+            -307592.45791326585,
+            -246484.35487342117,
+            -32823.31602991095
+          ],
+          "float64HexBE": [
+            "c112c621d4e73715",
+            "c10e16a2d6c7e051",
+            "c0e006ea1ceac283"
+          ],
+          "unit": "km",
+          "center": "Earth center (lunar model)",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "moonVec(moonState): geocentric approximation before legacy composition"
+        }
+      }
+    },
+    {
+      "inputJD": {
+        "decimal": 2461373.1666667,
+        "float64HexBE": "4142c75e9555559d"
+      },
+      "years": {
+        "decimal": 0.07392197125256673,
+        "float64HexBE": "3fb2ec8ce0fc5201"
+      },
+      "productionJD": {
+        "decimal": 2461373.1666667,
+        "float64HexBE": "4142c75e9555559d"
+      },
+      "scope": "Requested fixed legacy sample; model validity not certified",
+      "vectors": {
+        "sun": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "float64HexBE": [
+            "0000000000000000",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Exact production origin"
+        },
+        "mercury": {
+          "xyz": [
+            -56840681.05518658,
+            3648720.2412646166,
+            5511396.31389695
+          ],
+          "float64HexBE": [
+            "c18b1a8f487105a9",
+            "414bd6681ee1c24b",
+            "415506391416e33c"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "venus": {
+          "xyz": [
+            4832513.278804292,
+            107566823.1473507,
+            1199208.993693171
+          ],
+          "float64HexBE": [
+            "41526f4051d7edf5",
+            "4199a55b9c96e31a",
+            "41324c68fe62acf8"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "earth": {
+          "xyz": [
+            59898157.677299,
+            134886316.17924196,
+            -8237.404626545644
+          ],
+          "float64HexBE": [
+            "418c8fc96d6b1bbd",
+            "41a01467585bc59a",
+            "c0c016b3cacd7a51"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Earth position: uncorrected approximate Earth-Moon barycenter slot; NOT an independently computed Earth center"
+        },
+        "mars": {
+          "xyz": [
+            -96208953.15559769,
+            222581198.02960476,
+            7023739.691249928
+          ],
+          "float64HexBE": [
+            "c196f020e49f5500",
+            "41aa88a39c0f285b",
+            "415acb1eec3d7057"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "jupiter": {
+          "xyz": [
+            -571038885.2070646,
+            554986619.7095683,
+            10470429.897787124
+          ],
+          "float64HexBE": [
+            "c1c104ae529a8118",
+            "41c08a363ddad322",
+            "4163f883bcbaac10"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "saturn": {
+          "xyz": [
+            1372099506.0804112,
+            313878704.3598961,
+            -60060019.8781273
+          ],
+          "float64HexBE": [
+            "41d47224ec852575",
+            "41b2b568b05c2227",
+            "c18ca38b9f06679b"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "uranus": {
+          "xyz": [
+            1304619271.9509141,
+            2596688911.6319456,
+            -7272827.634456149
+          ],
+          "float64HexBE": [
+            "41d370ba41fcdbc7",
+            "41e358ca81f438e6",
+            "c15bbe5ee89aedf7"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "neptune": {
+          "xyz": [
+            4462038403.867903,
+            233445765.55389172,
+            -107633836.27724737
+          ],
+          "float64HexBE": [
+            "41f09f54d83de2ee",
+            "41abd4330b1b97b2",
+            "c199a972b11be6bc"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "ceres": {
+          "xyz": [
+            -51117513.97123598,
+            390280994.0563559,
+            21876330.87102538
+          ],
+          "float64HexBE": [
+            "c1885fee4fc5175f",
+            "41b74337220e6d57",
+            "4174dce6adefb84f"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "pluto": {
+          "xyz": [
+            3010310310.919271,
+            -4385043213.707152,
+            -401488522.06739795
+          ],
+          "float64HexBE": [
+            "41e66db614dd6aab",
+            "c1f055e730db507f",
+            "c1b7ee3a8a1140fe"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "moon": {
+          "xyz": [
+            59702909.10935199,
+            135194911.20688647,
+            3814.4083649667373
+          ],
+          "float64HexBE": [
+            "418c77f3e8dff3f0",
+            "41a01dd23e69ed06",
+            "40adccd1153681f0"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Moon position: approximate EMB slot plus geocentric lunar vector; inherits mixed-center error"
+        },
+        "earthSlotApproxEmbAU": {
+          "xyz": [
+            0.40039445345727775,
+            0.9016593321019908,
+            -0.00005506364888752153
+          ],
+          "float64HexBE": [
+            "3fd9a0100ec652c6",
+            "3fecda64abf05c30",
+            "bf0cde8491c1c03b"
+          ],
+          "unit": "AU",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "earth coefficient slot: approximate Earth-Moon barycenter, no mass-ratio correction"
+        },
+        "earthSlotApproxEmbKm": {
+          "xyz": [
+            59898157.677299,
+            134886316.17924196,
+            -8237.404626545644
+          ],
+          "float64HexBE": [
+            "418c8fc96d6b1bbd",
+            "41a01467585bc59a",
+            "c0c016b3cacd7a51"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Same uncorrected earth slot used by production"
+        },
+        "moonRelativeEarth": {
+          "xyz": [
+            -195248.56794700806,
+            308595.0276445145,
+            12051.81299151238
+          ],
+          "float64HexBE": [
+            "c107d5848b27cd0c",
+            "4112d5cc1c4ed7f7",
+            "40c789e8101b1acd"
+          ],
+          "unit": "km",
+          "center": "Earth center (lunar model)",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "moonVec(moonState): geocentric approximation before legacy composition"
+        }
+      }
+    },
+    {
+      "inputJD": {
+        "decimal": 2470172.5,
+        "float64HexBE": "4142d88e40000000"
+      },
+      "years": {
+        "decimal": 24.1651836640656,
+        "float64HexBE": "40382a497a02fec6"
+      },
+      "productionJD": {
+        "decimal": 2470172.5,
+        "float64HexBE": "4142d88e40000000"
+      },
+      "scope": "Additional out-of-range behavior sample; no accuracy claim",
+      "vectors": {
+        "sun": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "float64HexBE": [
+            "0000000000000000",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Exact production origin"
+        },
+        "mercury": {
+          "xyz": [
+            -58737247.30146752,
+            -6038478.105912532,
+            4889826.747736083
+          ],
+          "float64HexBE": [
+            "c18c0212fa6967ce",
+            "c15708f386c7455b",
+            "4152a738afdae872"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "venus": {
+          "xyz": [
+            -88797306.60857552,
+            60299517.17721698,
+            5954502.7669606535
+          ],
+          "float64HexBE": [
+            "c1952bc1ea6f2e6c",
+            "418cc0c7e96af0bc",
+            "4156b6f1b115e223"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "earth": {
+          "xyz": [
+            -25010888.917486537,
+            144964339.57987195,
+            -16744.306431484307
+          ],
+          "float64HexBE": [
+            "c177da2c8eae065d",
+            "41a147f5e728e4fa",
+            "c0d05a139c92cce4"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Earth position: uncorrected approximate Earth-Moon barycenter slot; NOT an independently computed Earth center"
+        },
+        "mars": {
+          "xyz": [
+            150219651.07028183,
+            159493202.3341438,
+            -331978.45206168614
+          ],
+          "float64HexBE": [
+            "41a1e8570623fbfb",
+            "41a30358a4ab14e5",
+            "c1144329cee94237"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "jupiter": {
+          "xyz": [
+            -667586937.2117364,
+            444617909.8069205,
+            13074641.393556563
+          ],
+          "float64HexBE": [
+            "c1c3e548bc9b1a2e",
+            "41ba8054b5ce9258",
+            "4168f01a2c9803ef"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "saturn": {
+          "xyz": [
+            946453335.182133,
+            -1145362366.37953,
+            -17845143.779580034
+          ],
+          "float64HexBE": [
+            "41cc34ddab975022",
+            "c1d11135ef984a38",
+            "c17104b97c7928ea"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "uranus": {
+          "xyz": [
+            -2706874187.1703506,
+            389015647.3028865,
+            36481307.64157038
+          ],
+          "float64HexBE": [
+            "c1e42af3e9657383",
+            "41b72fe85f4d89f8",
+            "41816548dd21efa7"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "neptune": {
+          "xyz": [
+            2460894061.6168733,
+            3717770886.913804,
+            -133272831.70640989
+          ],
+          "float64HexBE": [
+            "41e255c86db3bd6d",
+            "41ebb315d0dd3de2",
+            "c19fc653fed35d1d"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "ceres": {
+          "xyz": [
+            -370649970.1813301,
+            -96345710.04444112,
+            65025651.987635955
+          ],
+          "float64HexBE": [
+            "c1b617ab722e6ba6",
+            "c196f879b82d81f9",
+            "418f01b39fe6adae"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "pluto": {
+          "xyz": [
+            5677962638.348262,
+            -2148638864.6283045,
+            -1412403905.9115353
+          ],
+          "float64HexBE": [
+            "41f526ed58e5927b",
+            "c1e0023412141b12",
+            "c1d50be4b07a5698"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Legacy approximate heliocentric orbital-element position"
+        },
+        "moon": {
+          "xyz": [
+            -25333012.72168912,
+            145197694.0569058,
+            -50716.457220382355
+          ],
+          "float64HexBE": [
+            "c17828d14b8c09e4",
+            "41a14f14fc1d22c2",
+            "c0e8c38ea18ca3a9"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Production Moon position: approximate EMB slot plus geocentric lunar vector; inherits mixed-center error"
+        },
+        "earthSlotApproxEmbAU": {
+          "xyz": [
+            -0.1671874659743171,
+            0.969026757543762,
+            -0.0001119287751432167
+          ],
+          "float64HexBE": [
+            "bfc566661d549540",
+            "3fef024467132e1d",
+            "bf1d5769b702c1b7"
+          ],
+          "unit": "AU",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "earth coefficient slot: approximate Earth-Moon barycenter, no mass-ratio correction"
+        },
+        "earthSlotApproxEmbKm": {
+          "xyz": [
+            -25010888.917486537,
+            144964339.57987195,
+            -16744.306431484307
+          ],
+          "float64HexBE": [
+            "c177da2c8eae065d",
+            "41a147f5e728e4fa",
+            "c0d05a139c92cce4"
+          ],
+          "unit": "km",
+          "center": "Sun",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "Same uncorrected earth slot used by production"
+        },
+        "moonRelativeEarth": {
+          "xyz": [
+            -322123.8042025844,
+            233354.47703384652,
+            -33972.15078889805
+          ],
+          "float64HexBE": [
+            "c113a92f3780e1dd",
+            "410c7c53d0f71f0f",
+            "c0e09684d3433d37"
+          ],
+          "unit": "km",
+          "center": "Earth center (lunar model)",
+          "frame": "Legacy intended J2000 ecliptic/equinox; X vernal equinox, Z ecliptic north; lunar approximation not independently validated",
+          "meaning": "moonVec(moonState): geocentric approximation before legacy composition"
+        }
+      }
+    }
+  ]
+}
