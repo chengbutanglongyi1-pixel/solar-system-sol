@@ -1,0 +1,723 @@
+{
+  "schema": "SOL-M3-portable-v1",
+  "archive": {
+    "commit": "463f9f0fcbcc17435568fad9e9ff5865424bbc9a",
+    "originalRevision": "4f89ab2ad44b5209219f2d78405680ef826d9158",
+    "originalBlob": "96953222ef5151e193a3d79f7a612c039244fc47",
+    "sourceSha256": {
+      "4f89ab2ad44b5209219f2d78405680ef826d9158:src/SolarSystemApp.tsx": "07eb792aa1833c59bee02c344686d18d7f771bf9e600ae8a56ad64fd3cd49612",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/legacy-baseline.json": "f2136d8b901ef4edfa49f9123109ef9fd58a316aaceb3fd9272f619a22e2fb9c",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:scripts/science/fetch-horizons-ut.mjs": "4e5b8e85102f5261d0a540826f0cb23d03a5f3985c936b9d9fca1449de5411cc",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/analysis.json": "4f78be7288f1111a0bb75822405448cf7cd257f2cf68bceec1e51e9f75931a6d",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/emb.raw.json": "656a20a1d3b78f75eba04c8378ae23d8e200faa779ecbfad3551275ae0bc226c",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/emb.request.json": "c2dc55291dca443bcdd2819d066f25f920ec43e7004a6721acc8cb6982dfb45d",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/earth.raw.json": "43c92aa39cb224c2dd81e53fc99c6809f7a46052a0450fa5939bfa01d85b3eb3",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/earth.request.json": "37b1856faee926a3bc7766ba21580e498aa3dae2a979b13056629b29ea19ab88",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/moon-sun.raw.json": "fff8166befa3fdb0a5b475e5b772ec3b68a889e246ec43a0a4715af8949c948b",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/moon-sun.request.json": "af58a8dc695b4c4db61c548dc1de6afeb9bac2e1e182458490438e71a6799b8c",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/moon-earth.raw.json": "0819dd0e3c73ea3a77f52a8b712783c3e5aeff9864476ce33bcaaa4635038b81",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/moon-earth.request.json": "607e9dba0a11ae6752fc40f210ee4b138bd78465fb3890c9e46c584261883553",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/jupiter-system.raw.json": "d9e05afb3785ae63ab9c9d25a15cf973c4c5bb86e6ff351433da5d965cb45198",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/jupiter-system.request.json": "6f61a5bfbbe4d279ab2034b71b8a28ebb49b272bd5a8b969203164a7c56b1b95",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/jupiter-body.raw.json": "6891cd703198c0d6dcc13075e3f352c84ed86b6290a7805e1092492f921502ba",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/horizons-time-frame/jupiter-body.request.json": "1944dcc038322e7986ab693af422d9f251ad3bde9fade13e9f00fce4c602814e",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/time-prototype/erfa-reference.json": "7169854812754312f5ad6343694bccf0e50208ca96f5abd0682cf8858d25b0c3",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:fixtures/science/time-prototype/leap-seconds.json": "b407d2d78e6b928a37c4cd33881642a5d38a889196261998f28ee2b623f3af1f",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:scripts/science/time-prototype.mjs": "ac8d42d0a6e1d7f108400278f545c697f7c07382bd39062990706b44f0d3706c",
+      "463f9f0fcbcc17435568fad9e9ff5865424bbc9a:scripts/capture-orbit-baseline.mjs": "28a9348425e8e13f53b29a28009ddcb7723edb50bb223f345406d4f9436dea4c"
+    }
+  },
+  "geometry": {
+    "units": "km",
+    "frame": "right-handed J2000 ecliptic XYZ",
+    "legacyFrameStatus": "intended by SOL; lunar approximation not independently validated",
+    "horizonsFrame": "ICRF rotated to fixed J2000 ecliptic; 84381.448 arcsec obliquity; geometric positions",
+    "sunOrigin": [
+      0,
+      0,
+      0
+    ],
+    "attitude": null
+  },
+  "clock": {
+    "erfa": {
+      "pyerfa": "2.0.1.5",
+      "erfa": "2.0.1",
+      "sofa": "20231011",
+      "wheel": "https://files.pythonhosted.org/packages/b4/11/97233cf23ad5411ac6f13b1d6ee3888f90ace4f974d9bf9db887aa428912/pyerfa-2.0.1.5-cp39-abi3-win_amd64.whl",
+      "wheelSha256": "66292d437dcf75925b694977aa06eb697126e7b86553e620371ed3e48b5e0ad0",
+      "routines": [
+        "dtf2d",
+        "dat",
+        "utctai",
+        "taitt",
+        "dtdb",
+        "tttdb"
+      ],
+      "futureAssumption": "ERFA bundled table, no additional leap seconds beyond IERS C72 validity"
+    },
+    "leapTable": {
+      "version": "IERS Bulletin C 72 (2026-07-06)",
+      "source": "https://hpiers.obspm.fr/iers/bul/bulc/Leap_Second.dat",
+      "sourceSha256": "6cb6f5d4b819f2e568e25db4b0b26d89dedf031fdffb18bc94d40f4e94e268d7",
+      "validFrom": "1972-01-01",
+      "expiresExclusive": "2027-06-28",
+      "lastTaiMinusUtcSeconds": 37
+    },
+    "fixedPrototypeEndExclusive": "2052-01-01T00:00:00Z",
+    "samples": [
+      {
+        "id": "utc-start",
+        "utcIso": "1972-01-01T00:00:00Z",
+        "taiMinusUtcSeconds": 10,
+        "utcStatus": "published",
+        "jdUtcQuasi": [
+          2441317.5,
+          0
+        ],
+        "jdTai": [
+          2441317.5,
+          0.00011574074074074075
+        ],
+        "jdTt": [
+          2441317.5,
+          0.0004882407407407407
+        ],
+        "jdTdb": [
+          2441317.5,
+          0.00048823978802686193
+        ],
+        "tdbMinusTtSeconds": -0.00008231447912422768,
+        "jdUt1": null
+      },
+      {
+        "id": "j2000-utc-noon",
+        "utcIso": "2000-01-01T12:00:00Z",
+        "taiMinusUtcSeconds": 32,
+        "utcStatus": "published",
+        "jdUtcQuasi": [
+          2451544.5,
+          0.5
+        ],
+        "jdTai": [
+          2451544.5,
+          0.5003703703703704
+        ],
+        "jdTt": [
+          2451544.5,
+          0.5007428703703704
+        ],
+        "jdTdb": [
+          2451544.5,
+          0.5007428692212302
+        ],
+        "tdbMinusTtSeconds": -0.00009928570541778068,
+        "jdUt1": null
+      },
+      {
+        "id": "j2000-tdb",
+        "utcIso": "2000-01-01T11:58:55.816099307Z",
+        "taiMinusUtcSeconds": 32,
+        "utcStatus": "published",
+        "jdUtcQuasi": [
+          2451544.5,
+          0.4992571307790162
+        ],
+        "jdTai": [
+          2451544.5,
+          0.49962750114938653
+        ],
+        "jdTt": [
+          2451544.5,
+          0.5000000011493866
+        ],
+        "jdTdb": [
+          2451544.5,
+          0.4999999999999977
+        ],
+        "tdbMinusTtSeconds": -0.00009930719894379447,
+        "jdUt1": null
+      },
+      {
+        "id": "leap-2017-01-01-before",
+        "utcIso": "2016-12-31T23:59:59.500Z",
+        "taiMinusUtcSeconds": 36,
+        "utcStatus": "published",
+        "jdUtcQuasi": [
+          2457753.5,
+          0.9999826390898253
+        ],
+        "jdTai": [
+          2457753.5,
+          1.0004108796296296
+        ],
+        "jdTt": [
+          2457753.5,
+          1.0007833796296297
+        ],
+        "jdTdb": [
+          2457753.5,
+          1.0007833790567462
+        ],
+        "tdbMinusTtSeconds": -0.00004949714310231314,
+        "jdUt1": null
+      },
+      {
+        "id": "leap-2017-01-01-inside",
+        "utcIso": "2016-12-31T23:59:60.500Z",
+        "taiMinusUtcSeconds": 36,
+        "utcStatus": "published",
+        "jdUtcQuasi": [
+          2457753.5,
+          0.9999942130299417
+        ],
+        "jdTai": [
+          2457753.5,
+          1.0004224537037036
+        ],
+        "jdTt": [
+          2457753.5,
+          1.0007949537037037
+        ],
+        "jdTdb": [
+          2457753.5,
+          1.000794953130824
+        ],
+        "tdbMinusTtSeconds": -0.00004949680422563378,
+        "jdUt1": null
+      },
+      {
+        "id": "leap-2017-01-01-after",
+        "utcIso": "2017-01-01T00:00:00.500Z",
+        "taiMinusUtcSeconds": 37,
+        "utcStatus": "published",
+        "jdUtcQuasi": [
+          2457754.5,
+          0.000005787037037037037
+        ],
+        "jdTai": [
+          2457754.5,
+          0.0004340277777777778
+        ],
+        "jdTt": [
+          2457754.5,
+          0.0008065277777777778
+        ],
+        "jdTdb": [
+          2457754.5,
+          0.0008065272049020214
+        ],
+        "tdbMinusTtSeconds": -0.000049496465348909026,
+        "jdUt1": null
+      },
+      {
+        "id": "project-utc-epoch",
+        "utcIso": "2026-11-01T16:00:00Z",
+        "taiMinusUtcSeconds": 37,
+        "utcStatus": "published",
+        "jdUtcQuasi": [
+          2461345.5,
+          0.6666666666666666
+        ],
+        "jdTai": [
+          2461345.5,
+          0.6670949074074074
+        ],
+        "jdTt": [
+          2461345.5,
+          0.6674674074074074
+        ],
+        "jdTdb": [
+          2461345.5,
+          0.6674673905086684
+        ],
+        "tdbMinusTtSeconds": -0.0014600510421349706,
+        "jdUt1": null
+      },
+      {
+        "id": "table-expiry",
+        "utcIso": "2027-06-28T00:00:00Z",
+        "taiMinusUtcSeconds": 37,
+        "utcStatus": "assumed-no-new-leaps",
+        "jdUtcQuasi": [
+          2461584.5,
+          0
+        ],
+        "jdTai": [
+          2461584.5,
+          0.00042824074074074075
+        ],
+        "jdTt": [
+          2461584.5,
+          0.0008007407407407408
+        ],
+        "jdTdb": [
+          2461584.5,
+          0.0008007430463362824
+        ],
+        "tdbMinusTtSeconds": 0.00019920345479327033,
+        "jdUt1": null
+      },
+      {
+        "id": "preview-last-instant",
+        "utcIso": "2051-12-31T23:59:59.999999999Z",
+        "taiMinusUtcSeconds": 37,
+        "utcStatus": "assumed-no-new-leaps",
+        "jdUtcQuasi": [
+          2470536.5,
+          0.9999999999999883
+        ],
+        "jdTai": [
+          2470536.5,
+          1.000428240740729
+        ],
+        "jdTt": [
+          2470536.5,
+          1.0008007407407291
+        ],
+        "jdTdb": [
+          2470536.5,
+          1.000800739723783
+        ],
+        "tdbMinusTtSeconds": -0.00008786414155836544,
+        "jdUt1": null
+      }
+    ]
+  },
+  "referenceQueries": {
+    "emb": {
+      "target": 3,
+      "center": 10,
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%273%27&CENTER=%27500%4010%27&MAKE_EPHEM=%27YES%27&OBJ_DATA=%27YES%27&EPHEM_TYPE=%27VECTORS%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&TIME_TYPE=%27UT%27&VEC_DELTA_T=%27YES%27&TLIST_TYPE=%27JD%27&OUT_UNITS=%27KM-S%27&VEC_TABLE=%272%27&CSV_FORMAT=%27YES%27&TLIST=%272451545%2C2461346.1666667%2C2469806.5%2C2461346.4166667%2C2461347.1666667%2C2461353.1666667%2C2461373.1666667%2C2470172.5%27",
+      "retrievedAt": "2026-11-11T17:20:49.314Z",
+      "rawSha256": "656a20a1d3b78f75eba04c8378ae23d8e200faa779ecbfad3551275ae0bc226c"
+    },
+    "earth": {
+      "target": 399,
+      "center": 10,
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27399%27&CENTER=%27500%4010%27&MAKE_EPHEM=%27YES%27&OBJ_DATA=%27YES%27&EPHEM_TYPE=%27VECTORS%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&TIME_TYPE=%27UT%27&VEC_DELTA_T=%27YES%27&TLIST_TYPE=%27JD%27&OUT_UNITS=%27KM-S%27&VEC_TABLE=%272%27&CSV_FORMAT=%27YES%27&TLIST=%272451545%2C2461346.1666667%2C2469806.5%2C2461346.4166667%2C2461347.1666667%2C2461353.1666667%2C2461373.1666667%2C2470172.5%27",
+      "retrievedAt": "2026-11-11T17:20:52.094Z",
+      "rawSha256": "43c92aa39cb224c2dd81e53fc99c6809f7a46052a0450fa5939bfa01d85b3eb3"
+    },
+    "moon-sun": {
+      "target": 301,
+      "center": 10,
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27301%27&CENTER=%27500%4010%27&MAKE_EPHEM=%27YES%27&OBJ_DATA=%27YES%27&EPHEM_TYPE=%27VECTORS%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&TIME_TYPE=%27UT%27&VEC_DELTA_T=%27YES%27&TLIST_TYPE=%27JD%27&OUT_UNITS=%27KM-S%27&VEC_TABLE=%272%27&CSV_FORMAT=%27YES%27&TLIST=%272451545%2C2461346.1666667%2C2469806.5%2C2461346.4166667%2C2461347.1666667%2C2461353.1666667%2C2461373.1666667%2C2470172.5%27",
+      "retrievedAt": "2026-11-11T17:20:54.928Z",
+      "rawSha256": "fff8166befa3fdb0a5b475e5b772ec3b68a889e246ec43a0a4715af8949c948b"
+    },
+    "moon-earth": {
+      "target": 301,
+      "center": 399,
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27301%27&CENTER=%27500%40399%27&MAKE_EPHEM=%27YES%27&OBJ_DATA=%27YES%27&EPHEM_TYPE=%27VECTORS%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&TIME_TYPE=%27UT%27&VEC_DELTA_T=%27YES%27&TLIST_TYPE=%27JD%27&OUT_UNITS=%27KM-S%27&VEC_TABLE=%272%27&CSV_FORMAT=%27YES%27&TLIST=%272451545%2C2461346.1666667%2C2469806.5%2C2461346.4166667%2C2461347.1666667%2C2461353.1666667%2C2461373.1666667%2C2470172.5%27",
+      "retrievedAt": "2026-11-11T17:20:57.740Z",
+      "rawSha256": "0819dd0e3c73ea3a77f52a8b712783c3e5aeff9864476ce33bcaaa4635038b81"
+    },
+    "jupiter-system": {
+      "target": 5,
+      "center": 10,
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%275%27&CENTER=%27500%4010%27&MAKE_EPHEM=%27YES%27&OBJ_DATA=%27YES%27&EPHEM_TYPE=%27VECTORS%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&TIME_TYPE=%27UT%27&VEC_DELTA_T=%27YES%27&TLIST_TYPE=%27JD%27&OUT_UNITS=%27KM-S%27&VEC_TABLE=%272%27&CSV_FORMAT=%27YES%27&TLIST=%272451545%2C2461346.1666667%2C2469806.5%2C2461346.4166667%2C2461347.1666667%2C2461353.1666667%2C2461373.1666667%2C2470172.5%27",
+      "retrievedAt": "2026-11-11T17:21:06.038Z",
+      "rawSha256": "d9e05afb3785ae63ab9c9d25a15cf973c4c5bb86e6ff351433da5d965cb45198"
+    },
+    "jupiter-body": {
+      "target": 599,
+      "center": 10,
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27599%27&CENTER=%27500%4010%27&MAKE_EPHEM=%27YES%27&OBJ_DATA=%27YES%27&EPHEM_TYPE=%27VECTORS%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&TIME_TYPE=%27UT%27&VEC_DELTA_T=%27YES%27&TLIST_TYPE=%27JD%27&OUT_UNITS=%27KM-S%27&VEC_TABLE=%272%27&CSV_FORMAT=%27YES%27&TLIST=%272451545%2C2461346.1666667%2C2469806.5%2C2461346.4166667%2C2461347.1666667%2C2461353.1666667%2C2461373.1666667%2C2470172.5%27",
+      "retrievedAt": "2026-11-11T17:21:08.900Z",
+      "rawSha256": "6891cd703198c0d6dcc13075e3f352c84ed86b6290a7805e1092492f921502ba"
+    }
+  },
+  "positions": [
+    {
+      "sampleKeyNumericJD": 2451545,
+      "range": "within-planet-elements-fit-years",
+      "legacy": {
+        "inputJD": {
+          "decimal": 2451545,
+          "float64HexBE": "4142b42c80000000"
+        },
+        "years": {
+          "decimal": -26.834131873237617,
+          "float64HexBE": "c03ad589aa9c1b56"
+        },
+        "productionJD": {
+          "decimal": 2451545,
+          "float64HexBE": "4142b42c80000000"
+        },
+        "clockUtcLabel": "2000-01-01T11:59:59.997Z",
+        "vectors": {
+          "sun": {
+            "target": "sun",
+            "center": "sun",
+            "xyz": [
+              0,
+              0,
+              0
+            ],
+            "float64HexBE": [
+              "0000000000000000",
+              "0000000000000000",
+              "0000000000000000"
+            ]
+          },
+          "earth": {
+            "target": "emb-approx-used-as-earth",
+            "center": "sun",
+            "xyz": [
+              -26504441.61531118,
+              144693227.46125248,
+              -38.66346406764603
+            ],
+            "float64HexBE": [
+              "c17946cf99d85089",
+              "41a13fafd6ec2949",
+              "c04354ec63fc4e30"
+            ]
+          },
+          "moon": {
+            "target": "moon-legacy-composite",
+            "center": "sun",
+            "xyz": [
+              -26796186.203248426,
+              144418542.65979147,
+              36381.99235519191
+            ],
+            "float64HexBE": [
+              "c1798e09a340816c",
+              "41a1374ddd51d030",
+              "40e1c3bfc15face9"
+            ]
+          },
+          "moonRelativeEarth": {
+            "target": "moon-approx",
+            "center": "geocenter-of-lunar-model",
+            "xyz": [
+              -291744.58793724765,
+              -274684.80146100424,
+              36420.65581925956
+            ],
+            "float64HexBE": [
+              "c111ce825a0c38cb",
+              "c110c3f334b23189",
+              "40e1c894fc78abfd"
+            ]
+          },
+          "jupiter": {
+            "target": "jupiter-system-approx",
+            "center": "sun",
+            "xyz": [
+              598140298.9669315,
+              440672079.9936054,
+              -15216768.478788761
+            ],
+            "float64HexBE": [
+              "41c1d372c57bc469",
+              "41ba441f4ffe5cec",
+              "c16d06100f523ccf"
+            ]
+          }
+        }
+      },
+      "horizons": {
+        "utcCalendar": "A.D. 2000-Jan-01 12:00:00.0000",
+        "jdUtc": 2451545,
+        "jdTdb": 2451545.0007428695,
+        "tdbMinusUtcSeconds": 64.183903,
+        "futureLeapSecondsAssumed": false,
+        "vectors": {
+          "emb": [
+            -26504488.69747102,
+            144693604.0047935,
+            -170.430496186018
+          ],
+          "earth": [
+            -26500945.98710609,
+            144696945.7393835,
+            -611.1377527117729
+          ],
+          "moon-sun": [
+            -26792513.06318406,
+            144421919.0837799,
+            35659.31987885386
+          ],
+          "moon-earth": [
+            -291567.0760779644,
+            -275026.6556035658,
+            36270.45763156361
+          ],
+          "jupiter-system": [
+            598567075.9132724,
+            439605444.5358985,
+            -15226852.25373101
+          ],
+          "jupiter-body": [
+            598567116.9709978,
+            439605395.9974722,
+            -15226853.27350616
+          ]
+        }
+      }
+    },
+    {
+      "sampleKeyNumericJD": 2461346.1666667,
+      "range": "within-planet-elements-fit-years",
+      "legacy": {
+        "inputJD": {
+          "decimal": 2461346.1666667,
+          "float64HexBE": "4142c7511555559d"
+        },
+        "years": {
+          "decimal": 0,
+          "float64HexBE": "0000000000000000"
+        },
+        "productionJD": {
+          "decimal": 2461346.1666667,
+          "float64HexBE": "4142c7511555559d"
+        },
+        "clockUtcLabel": "2026-11-01T16:00:00.000Z",
+        "vectors": {
+          "sun": {
+            "target": "sun",
+            "center": "sun",
+            "xyz": [
+              0,
+              0,
+              0
+            ],
+            "float64HexBE": [
+              "0000000000000000",
+              "0000000000000000",
+              "0000000000000000"
+            ]
+          },
+          "earth": {
+            "target": "emb-approx-used-as-earth",
+            "center": "sun",
+            "xyz": [
+              115597656.0523115,
+              93178595.43641001,
+              -5674.78172439355
+            ],
+            "float64HexBE": [
+              "419b8f8560359125",
+              "4196372b8dbee244",
+              "c0b62ac81f1700c8"
+            ]
+          },
+          "moon": {
+            "target": "moon-legacy-composite",
+            "center": "sun",
+            "xyz": [
+              115377206.15365462,
+              93477933.80800712,
+              5863.645293912905
+            ],
+            "float64HexBE": [
+              "419b8210d89d57a3",
+              "41964970b73b6638",
+              "40b6e7a531fb5c3c"
+            ]
+          },
+          "moonRelativeEarth": {
+            "target": "moon-approx",
+            "center": "geocenter-of-lunar-model",
+            "xyz": [
+              -220449.8986568819,
+              299338.3715971123,
+              11538.427018306455
+            ],
+            "float64HexBE": [
+              "c10ae90f307304f1",
+              "411245297c83f412",
+              "40c68936a8892e82"
+            ]
+          },
+          "jupiter": {
+            "target": "jupiter-system-approx",
+            "center": "sun",
+            "xyz": [
+              -549003068.2741048,
+              575038607.9800551,
+              9893959.807089403
+            ],
+            "float64HexBE": [
+              "c1c05c8f9e2315de",
+              "41c1233247fd7272",
+              "4162df08f9d3ad28"
+            ]
+          }
+        }
+      },
+      "horizons": {
+        "utcCalendar": "A.D. 2026-Nov-01 16:00:00.0029",
+        "jdUtc": 2461346.1666667,
+        "jdTdb": 2461346.1674674237,
+        "tdbMinusUtcSeconds": 69.182542,
+        "futureLeapSecondsAssumed": false,
+        "vectors": {
+          "emb": [
+            115594657.4457527,
+            93186536.05162176,
+            -6429.999575868249
+          ],
+          "earth": [
+            115597342.076995,
+            93182902.13485843,
+            -6567.146005012095
+          ],
+          "moon-sun": [
+            115376395.4002872,
+            93481975.54935089,
+            4720.083042912185
+          ],
+          "moon-earth": [
+            -220946.6767077604,
+            299073.4144924614,
+            11287.22904792237
+          ],
+          "jupiter-system": [
+            -549002243.6773672,
+            575505645.6298459,
+            9892545.25967291
+          ],
+          "jupiter-body": [
+            -549002052.0191586,
+            575505655.7856159,
+            9892548.375593513
+          ]
+        }
+      }
+    },
+    {
+      "sampleKeyNumericJD": 2470172.5,
+      "range": "planet-elements-extrapolation",
+      "legacy": {
+        "inputJD": {
+          "decimal": 2470172.5,
+          "float64HexBE": "4142d88e40000000"
+        },
+        "years": {
+          "decimal": 24.1651836640656,
+          "float64HexBE": "40382a497a02fec6"
+        },
+        "productionJD": {
+          "decimal": 2470172.5,
+          "float64HexBE": "4142d88e40000000"
+        },
+        "clockUtcLabel": "2050-12-31T23:59:59.997Z",
+        "vectors": {
+          "sun": {
+            "target": "sun",
+            "center": "sun",
+            "xyz": [
+              0,
+              0,
+              0
+            ],
+            "float64HexBE": [
+              "0000000000000000",
+              "0000000000000000",
+              "0000000000000000"
+            ]
+          },
+          "earth": {
+            "target": "emb-approx-used-as-earth",
+            "center": "sun",
+            "xyz": [
+              -25010888.917486537,
+              144964339.57987195,
+              -16744.306431484307
+            ],
+            "float64HexBE": [
+              "c177da2c8eae065d",
+              "41a147f5e728e4fa",
+              "c0d05a139c92cce4"
+            ]
+          },
+          "moon": {
+            "target": "moon-legacy-composite",
+            "center": "sun",
+            "xyz": [
+              -25333012.72168912,
+              145197694.0569058,
+              -50716.457220382355
+            ],
+            "float64HexBE": [
+              "c17828d14b8c09e4",
+              "41a14f14fc1d22c2",
+              "c0e8c38ea18ca3a9"
+            ]
+          },
+          "moonRelativeEarth": {
+            "target": "moon-approx",
+            "center": "geocenter-of-lunar-model",
+            "xyz": [
+              -322123.8042025844,
+              233354.47703384652,
+              -33972.15078889805
+            ],
+            "float64HexBE": [
+              "c113a92f3780e1dd",
+              "410c7c53d0f71f0f",
+              "c0e09684d3433d37"
+            ]
+          },
+          "jupiter": {
+            "target": "jupiter-system-approx",
+            "center": "sun",
+            "xyz": [
+              -667586937.2117364,
+              444617909.8069205,
+              13074641.393556563
+            ],
+            "float64HexBE": [
+              "c1c3e548bc9b1a2e",
+              "41ba8054b5ce9258",
+              "4168f01a2c9803ef"
+            ]
+          }
+        }
+      },
+      "horizons": {
+        "utcCalendar": "A.D. 2051-Jan-01 00:00:00.0000",
+        "jdUtc": 2470172.5,
+        "jdTdb": 2470172.50080074,
+        "tdbMinusUtcSeconds": 69.183916,
+        "futureLeapSecondsAssumed": true,
+        "vectors": {
+          "emb": [
+            -25010361.91969212,
+            144964240.9668818,
+            -16681.16073627025
+          ],
+          "earth": [
+            -25006447.52919984,
+            144961406.5505429,
+            -16266.84134148061
+          ],
+          "moon-sun": [
+            -25328604.09095496,
+            145194680.6258065,
+            -50365.56295743585
+          ],
+          "moon-earth": [
+            -322156.5617551214,
+            233274.0752635451,
+            -34098.72161595104
+          ],
+          "jupiter-system": [
+            -666937399.6065184,
+            444668057.2715253,
+            13055234.06734532
+          ],
+          "jupiter-body": [
+            -666937374.1037706,
+            444667881.365205,
+            13055228.25892195
+          ]
+        }
+      }
+    }
+  ]
+}
